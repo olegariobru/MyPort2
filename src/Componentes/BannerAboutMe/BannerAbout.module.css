@@ -1,0 +1,52 @@
+
+.imagens {
+    position: relative;
+    display: flex;
+    height: 406px;
+    align-items: center;
+    justify-content: center;
+
+}
+ 
+.imagens > .minhaFoto {
+    position: absolute;
+    bottom: 0;
+    width: 18vw;
+    border-radius: 50%;
+}
+ 
+.imagens > .circuloColorido {
+    position: absolute;
+    bottom: 2.2vw;
+    width: 25vw;
+}
+
+
+.textoBanner{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5% 0 0 0;
+    font-family: var(--fonte-titulos);
+}
+
+.imgBanner{
+    background-image: url('Images/assets/fundo.png');   
+}
+
+.SobreMe{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobreText{
+    font-family: var(--fonte-secundaria);
+    text-align: center;
+    width: 80%;
+    padding: 10% 0 10% 0;
+    cursor: default;
+}

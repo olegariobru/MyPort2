@@ -1,0 +1,33 @@
+.FooterDad{
+    display: flex;
+    justify-content: center;
+}
+
+.socialMedias{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+}
+.socialMedias a{
+    font-size: 150%;
+    transition: transform 0.5s ease;
+}
+
+.socialMedias a :hover{
+    transform: scale(1.1);
+}
+
+.socialMedias li{
+    margin-right: 10px;
+}
+.socialMedias li:last-child{
+    margin-right: 0;
+}
+
+.legal{
+    font-family: var(--fonte-footer);
+    font-size: 90%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
