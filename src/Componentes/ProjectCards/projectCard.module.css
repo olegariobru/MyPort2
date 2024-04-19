@@ -1,0 +1,64 @@
+.cards {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 300px;
+  height: 200px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease, border-color 0.5s ease;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  border: 0.50px solid;
+  border-color: var(--roxo);
+}
+
+.titulo {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-family: var(--fonte-titulos);
+}
+
+
+.subtitulo {
+  margin-bottom: 10px;
+  font-family: var(--fonte-footer);
+}
+
+.botao {
+  padding: 10px 20px;
+  background-color: var(--roxo);
+  color: var(--branco);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: var(--fonte-secundaria);
+}
+
+.botao:hover {
+  background-color: var(--branco);
+  color: var(--roxo);
+  border-color: var(--roxo);
+  border: 0.95px solid;
+}
+
+
+.textoBanner{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5% 0 0 0;
+  font-family: var(--fonte-titulos);
+}
+
+

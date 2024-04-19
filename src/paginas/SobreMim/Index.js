@@ -1,7 +1,11 @@
-import BannerAbout from "Componentes/BannerAboutMe";
+import BannerAbout from "Componentes/AboutMe";
+import BannerSecundario from "Componentes/BannerSecundario";
 
 export default function sobremim(){
     return(
-        <BannerAbout/>
+        <main>
+            <BannerSecundario/>
+            <BannerAbout/>
+        </main>
     )
 }

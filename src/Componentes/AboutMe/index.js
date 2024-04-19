@@ -1,20 +1,15 @@
-import styles from './BannerAbout.module.css'
-import circuloColorido from 'Images/assets/circulo_colorido.png'
-import minhaFoto from 'Images/EJRW52oWoAEuR09.jpg'
+import styles from './About.module.css'
 
 export default function BannerAbout(){
     return (
        <div className={styles.CorpoBanner}> 
-        <div className={styles.imgBanner}>
-            <div className={styles.imagens}>
-                <img className={styles.circuloColorido} src={circuloColorido} aria-hidden={true} alt='imagem de teste'/>
-                <img className={styles.minhaFoto} src={minhaFoto} alt="Foto do Bruno"/>
-            </div>
-            <div className={styles.textoBanner}>
-                <h2>
-                    Sobre mim
-                </h2>
-            </div>
+                
+                <div className={styles.textoBanner}>
+                    <h2>
+                        Sobre mim
+                    </h2>
+                </div>
+                
                 <div className={styles.SobreMe}> 
                     <p className={styles.sobreText}>
                     Olá! Meu nome é Bruno Macedo Olegário, e sou um entusiasta da tecnologia apaixonado por criar soluções inovadoras e intuitivas no mundo da web. Com uma base sólida em service desk, infraestrutura e governança de TI, embarquei em uma jornada empolgante para explorar o universo do desenvolvimento front-end.    
@@ -25,7 +20,7 @@ export default function BannerAbout(){
                     </p>
                 </div>
         </div>
-       </div> 
+       
 
     )
 }

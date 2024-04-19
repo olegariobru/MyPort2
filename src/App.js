@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Menu from "./Componentes/Menu";
 import Footer from "Componentes/Footer";
 import PaginaPadrao from "Componentes/PaginaPadrão";
+import Projetos from "paginas/Projetos";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         </Route>
         
         <Route path="SobreMim" element={<SobreMim/>}/>
+        <Route path="Projetos" element={<Projetos/>}/>
         <Route path="*" element={<div>Página não encontrada</div>}/>  
       </Routes>
       

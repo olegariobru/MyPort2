@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body{
+  background-image: url('Images/assets/fundo.png');
+}
+
 :root {
   --azul-escuro: #041833;
   --azul-medio: #1875E8;

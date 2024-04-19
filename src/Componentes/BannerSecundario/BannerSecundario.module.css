@@ -1,0 +1,23 @@
+
+.imagens {
+    position: relative;
+    display: flex;
+    height: 406px;
+    align-items: center;
+    justify-content: center;
+
+}
+ 
+.imagens > .minhaFoto {
+    position: absolute;
+    bottom: 0;
+    width: 18vw;
+    border-radius: 50%;
+}
+ 
+.imagens > .circuloColorido {
+    position: absolute;
+    bottom: 2.2vw;
+    width: 25vw;
+}
+
