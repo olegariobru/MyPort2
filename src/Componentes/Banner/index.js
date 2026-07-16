@@ -1,6 +1,6 @@
 import styles from 'Componentes/Banner/Banner.module.css';
-import circuloColorido from 'Images/assets/circulo_colorido.png';
-import minhaFoto from 'Images/EJRW52oWoAEuR09.jpg';
+import circuloColorido from 'Images/assets/anel.png';
+import minhaFoto from 'Images/assets/eu2.png';
 
 export default function Banner(){
     return(
@@ -8,7 +8,7 @@ export default function Banner(){
             <div className={styles.banner}>
                    <div className={styles.apresentacao}>
                         <h1 className={styles.titulo}>Olá, eu sou o Bruno Olegário!</h1>
-                        <p className={styles.paragrafo}>Desenvolvedor front-end</p>
+                        <p className={styles.paragrafo}>Desenvolvedor Full Stack</p>
                    </div>
 
                    <div className={styles.imagens}>

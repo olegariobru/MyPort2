@@ -1,6 +1,6 @@
 import styles from './BannerSecundario.module.css'
-import circuloColorido from 'Images/assets/circulo_colorido.png'
-import minhaFoto from 'Images/EJRW52oWoAEuR09.jpg'
+import circuloColorido from 'Images/assets/anel.png'
+import minhaFoto from 'Images/assets/eu2.png'
 
 export default function BannerSecundario(){
     return(

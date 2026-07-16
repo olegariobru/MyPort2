@@ -2,7 +2,7 @@
 .link {
     font-size: 1.25rem;
     line-height: 1.5rem;
-    color: var(--cor-fonte-principal);
+    color: var(--branco);
     font-family: var(--fonte-secundaria);
 }
 .linkDestacado{

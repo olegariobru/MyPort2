@@ -1,17 +1,18 @@
 .cards {
   display: flex;
   justify-content: center;
+  gap: 20px;
 }
 
 .card {
   width: 300px;
-  height: 200px;
+  height: 270px;
   background-color: #f0f0f0;
   border-radius: 10px;
-  padding: 20px;
+  padding: 1%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s ease, border-color 0.5s ease;
-  margin: 20px;
+  margin: 8%;
   overflow: hidden;
 }
 
@@ -23,18 +24,22 @@
 
 .titulo {
   font-size: 1.5em;
-  margin-bottom: 10px;
   font-family: var(--fonte-titulos);
+  padding: 0;
+  margin: -10% 0 0 0;
 }
 
 
 .subtitulo {
-  margin-bottom: 10px;
   font-family: var(--fonte-footer);
+  margin: 0;
+  padding: 0;
+  font-size: 80%;
 }
 
 .botao {
   padding: 10px 20px;
+  margin-top: 10px;
   background-color: var(--roxo);
   color: var(--branco);
   border: none;
@@ -59,6 +64,13 @@
   justify-content: center;
   margin: 5% 0 0 0;
   font-family: var(--fonte-titulos);
+  color: var(--branco);
+}
+
+.imagem {
+  width: 100%;
+  height: auto;
+  
 }
 
 

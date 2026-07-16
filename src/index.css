@@ -5,7 +5,7 @@
 }
 
 body{
-  background-image: url('Images/assets/fundo.png');
+  background-image: url('Images/assets/fundo2.png');
 }
 
 :root {
@@ -15,7 +15,7 @@ body{
   --cor-fonte-principal: #041833;
   --cor-fonte-post: #444444;
   --branco: #FFF;
-  --preto: #000000
+  --preto: #000000;
   --fonte-principal: "Cagliostro", sans-serif;
   --fonte-secundaria: "Ubuntu Mono", monospace;
   --fonte-footer: "Raleway", sans-serif;

@@ -5,6 +5,7 @@
     justify-content: center;
     margin: 5% 0 0 0;
     font-family: var(--fonte-titulos);
+    color: var(--branco);
 }
 
 
@@ -19,6 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--branco);
 }
 
 .sobreText{

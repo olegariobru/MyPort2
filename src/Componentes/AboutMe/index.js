@@ -12,11 +12,10 @@ export default function BannerAbout(){
                 
                 <div className={styles.SobreMe}> 
                     <p className={styles.sobreText}>
-                    Olá! Meu nome é Bruno Macedo Olegário, e sou um entusiasta da tecnologia apaixonado por criar soluções inovadoras e intuitivas no mundo da web. Com uma base sólida em service desk, infraestrutura e governança de TI, embarquei em uma jornada empolgante para explorar o universo do desenvolvimento front-end.    
-                    Ao longo dos meus nove meses como desenvolvedor, mergulhei de cabeça em linguagens como HTML, CSS e JavaScript, refinando minhas habilidades para construir interfaces web responsivas e atraentes. Estou sempre em busca de aprender e dominar novas tecnologias, frameworks e bibliotecas, como React e Angular, para melhorar continuamente minhas habilidades e entregar produtos de alta qualidade.     
-                    Minha experiência em atendimento a clientes, tanto via telefone quanto presencialmente, me deu uma compreensão profunda das necessidades do usuário final e a importância de uma comunicação clara e eficaz. Estou comprometido em fornecer experiências excepcionais aos usuários, garantindo que cada interação seja positiva e satisfatória.    
-                    Estou animado para continuar minha jornada, contribuindo para projetos inovadores e colaborando com equipes talentosas para impulsionar o sucesso do produto. Estou sempre aberto a novas oportunidades de aprendizado e desafios que me permitam crescer pessoal e profissionalmente.    
-                    Se você está interessado em saber mais sobre mim ou em colaborar em projetos empolgantes, não hesite em entrar em contato. Estou sempre disponível para uma conversa!
+                        Olá! Sou Bruno Macedo Olegário, profissional de Tecnologia da Informação com experiência em suporte técnico, infraestrutura, governança de TI e desenvolvimento web.
+                        Atualmente, atuo desenvolvendo soluções web modernas utilizando tecnologias como React, JavaScript, Node.js, Firebase e PostgreSQL. Minha experiência anterior em suporte e atendimento ao usuário me proporcionou uma visão prática da tecnologia, permitindo criar aplicações que equilibram desempenho, usabilidade e necessidades reais do negócio.
+                        Tenho perfil analítico, gosto de resolver problemas e estou sempre buscando aprimorar meus conhecimentos por meio de novos desafios e projetos. Acredito que a tecnologia deve simplificar processos, gerar resultados e oferecer uma experiência positiva para quem a utiliza.
+                        Neste portfólio você encontrará alguns dos projetos que desenvolvi e as tecnologias com as quais trabalho. Estou sempre aberto a novas oportunidades, parcerias e desafios profissionais.
                     </p>
                 </div>
         </div>
