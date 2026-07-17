@@ -165,12 +165,12 @@
 
     .titulo {
         margin: 0;
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
     .paragrafo {
-        margin: 1rem 0;
-        line-height: 1.8rem;
+        margin: 0 0 2% 0;
+        line-height: 0.5rem;
     }
 
     .button {
