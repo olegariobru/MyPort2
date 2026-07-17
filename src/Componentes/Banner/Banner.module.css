@@ -1,10 +1,12 @@
-
 .banner {
-    padding: 0.1rem 7.5rem;
     width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 2rem 7.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    gap: 2rem;
 }
 
 .apresentacao {
@@ -15,42 +17,50 @@
 .titulo {
     font-family: var(--fonte-secundaria);
     color: var(--branco);
-    font-size: 150%;
-    margin-top: 5rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 200;
-    margin-bottom: 0;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 .paragrafo {
     font-family: var(--fonte-secundaria);
     color: var(--branco);
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 1.2vw, 1.4rem);
     line-height: 2rem;
+    max-width: 700px;
 }
 
 .imagens {
     position: relative;
-    height: 356px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .imagens > .minhaFoto {
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 18vw;
+    width: clamp(180px, 18vw, 350px);
     border-radius: 50%;
     z-index: 2;
 }
 
 .imagens > .circuloColorido {
     position: absolute;
-    right: 7vw;
-    bottom: 2.2vw;
-    width: 25vw;
+    right: 4rem;
+    bottom: 1.5rem;
+    width: clamp(260px, 25vw, 500px);
+    z-index: 1;
 }
 
 .button {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .button01 {
@@ -74,7 +84,6 @@
     line-height: 1;
     overflow: hidden;
     padding: 0 16px;
-    margin: 0;
     text-decoration: none;
     transition: box-shadow .15s, transform .15s;
     user-select: none;
@@ -107,7 +116,10 @@
     transform: translateY(2px);
 }
 
-/* TABLETS */
+/* ==========================
+   TABLETS
+========================== */
+
 @media (max-width: 1100px) {
     .banner {
         padding: 3rem 2rem;
@@ -116,16 +128,10 @@
 
     .titulo {
         margin-top: 0;
-        margin-bottom: 1rem;
-        font-size: 2rem;
-    }
-
-    .paragrafo {
-        margin-bottom: 1rem;
     }
 
     .imagens {
-        height: 320px;
+        height: 350px;
     }
 
     .imagens > .minhaFoto {
@@ -134,12 +140,15 @@
 
     .imagens > .circuloColorido {
         width: 320px;
-        right: 30px;
-        bottom: 20px;
+        right: 2rem;
+        bottom: 1rem;
     }
 }
 
-/* CELULARES */
+/* ==========================
+   MOBILE
+========================== */
+
 @media (max-width: 744px) {
     .banner {
         display: flex;
@@ -147,7 +156,7 @@
         align-items: center;
         text-align: center;
         padding: 2rem 1rem;
-        gap: 1.5rem;
+        gap: 2rem;
     }
 
     .apresentacao {
@@ -156,44 +165,92 @@
 
     .titulo {
         margin: 0;
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .paragrafo {
         margin: 1rem 0;
-        padding: 0;
-        font-size: 1rem;
-        line-height: 1.7rem;
+        line-height: 1.8rem;
     }
 
     .button {
-        display: flex;
         justify-content: center;
     }
 
     .imagens {
-        position: relative;
         width: 100%;
         height: 280px;
         margin: 0;
     }
 
     .imagens > .circuloColorido {
-        position: absolute;
         width: 220px;
         left: 50%;
-        bottom: 0;
         right: auto;
+        bottom: 0;
         transform: translateX(-50%);
     }
 
     .imagens > .minhaFoto {
-        position: absolute;
         width: 170px;
         left: 50%;
-        bottom: 0;
         right: auto;
+        bottom: 0;
         transform: translateX(-50%);
-        z-index: 2;
+    }
+}
+
+/* ==========================
+   DESKTOP GRANDE
+========================== */
+
+@media (min-width: 1440px) {
+    .banner {
+        max-width: 1700px;
+        padding: 2rem 5rem;
+    }
+
+    .titulo {
+        font-size: 3.2rem;
+    }
+
+    .paragrafo {
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+    }
+
+    .imagens {
+        height: 500px;
+    }
+}
+
+/* ==========================
+   ULTRAWIDE / TV
+========================== */
+
+@media (min-width: 1920px) {
+    .banner {
+        max-width: 1800px;
+    }
+
+    .titulo {
+        font-size: 3.8rem;
+    }
+
+    .paragrafo {
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+    }
+
+    .imagens {
+        height: 600px;
+    }
+
+    .imagens > .minhaFoto {
+        width: 350px;
+    }
+
+    .imagens > .circuloColorido {
+        width: 500px;
     }
 }
