@@ -130,35 +130,36 @@
 @media (max-width: 744px) {
     .banner {
         padding: 2rem 1rem;
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
- 
+
     .titulo {
-        margin-bottom: 2rem;
+        margin: 0;
+        padding: 0;
     }
  
     .paragrafo {
-        margin-bottom: 2rem;
+        margin: -5% 0 0 0;
+        padding: 0;
     }
  
-    .imagens {
-        height: 307px;
-    }
- 
-    .imagens > .minhaFoto, .imagens > .circuloColorido {
-        left: 0;
-        right: 0;
-        margin: 0 auto;
+    .imagens  {
+        height: 300px;
+        margin: -5% 0 10% 0;
     }
    
     .imagens > .minhaFoto {
         width: 170px;
-        transform: translate(5rem, 0px);
+        transform: translate(5.5rem, 0px);
     }
    
     .imagens > .circuloColorido {
         width: 240px;
-        transform: translate(-1.5rem, 0px);
+        margin: 0;
+        padding: 0;
+        transform: translate(6.5rem, 5%);
     }
 }
 
