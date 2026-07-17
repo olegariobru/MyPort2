@@ -166,11 +166,12 @@
     .titulo {
         margin: 0;
         font-size: 1rem;
+        padding: 0;
     }
 
     .paragrafo {
         margin: 0 0 2% 0;
-        line-height: 0.5rem;
+        line-height: 0.1rem;
     }
 
     .button {
@@ -179,14 +180,15 @@
 
     .imagens {
         width: 100%;
-        height: 280px;
+        height: 180px;
         margin: 0;
     }
 
     .imagens > .circuloColorido {
         width: 220px;
-        left: 50%;
+        left: 30%;
         right: auto;
+        top: 10%;
         bottom: 0;
         transform: translateX(-50%);
     }
