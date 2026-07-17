@@ -1,8 +1,8 @@
 .banner {
     width: 100%;
     max-width: 1600px;
-    margin: 0 auto;
-    padding: 2rem 7.5rem;
+    margin: -9% 0 0 0;
+    padding: 1rem 7.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -123,24 +123,35 @@
 @media (max-width: 1100px) {
     .banner {
         padding: 3rem 2rem;
-        gap: 2rem;
+        gap: 0.3rem;
     }
 
     .titulo {
-        margin-top: 0;
+        margin: 0 0 0 15%;
     }
+    
+    .paragrafo {
+       margin: 0 0 2% 20%;
+       line-height: 1.5rem;
+    }
+
+    .button {
+        margin: 2% 0 0 15%;
+    }    
 
     .imagens {
         height: 350px;
+        margin: 0 15% 0 0;
     }
 
     .imagens > .minhaFoto {
-        width: 220px;
+        width: 300px;
+        top: 43%;
     }
 
     .imagens > .circuloColorido {
         width: 320px;
-        right: 2rem;
+        right: 7.5rem;
         bottom: 1rem;
     }
 }
@@ -234,6 +245,8 @@
 @media (min-width: 1920px) {
     .banner {
         max-width: 1800px;
+        margin: -8% 0 0 0;
+        padding: 2rem 5rem;
     }
 
     .titulo {
@@ -250,10 +263,11 @@
     }
 
     .imagens > .minhaFoto {
-        width: 350px;
+        width: 450px;
+        top: 40%;
     }
 
     .imagens > .circuloColorido {
-        width: 500px;
+        width: 550px;
     }
 }
