@@ -1,15 +1,17 @@
+
 .banner {
     padding: 0.1rem 7.5rem;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 
-.apresentacao{
+.apresentacao {
     padding: 0;
     margin: 0;
 }
- 
+
 .titulo {
     font-family: var(--fonte-secundaria);
     color: var(--branco);
@@ -18,28 +20,28 @@
     font-weight: 200;
     margin-bottom: 0;
 }
- 
+
 .paragrafo {
     font-family: var(--fonte-secundaria);
     color: var(--branco);
     font-size: 1.2rem;
     line-height: 2rem;
 }
- 
 
 .imagens {
     position: relative;
     height: 356px;
 }
- 
+
 .imagens > .minhaFoto {
     position: absolute;
     right: 0;
     bottom: 0;
     width: 18vw;
     border-radius: 50%;
+    z-index: 2;
 }
- 
+
 .imagens > .circuloColorido {
     position: absolute;
     right: 7vw;
@@ -47,48 +49,55 @@
     width: 25vw;
 }
 
-.button{
-    margin-top: 0;
+.button {
+    margin-top: 1rem;
 }
 
-.button01{
+.button01 {
     align-items: center;
     appearance: none;
     background-color: var(--branco);
     border-radius: 4px;
     border-width: 0;
-    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-shadow:
+        rgba(45, 35, 66, 0.4) 0 2px 4px,
+        rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+        #D6D6E7 0 -3px 0 inset;
     box-sizing: border-box;
     color: var(--azul-escuro);
     cursor: pointer;
-    display: inline;
-    font-family: var(--fonte-secundaria) ;
-    height: 48px;
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
+    font-family: var(--fonte-secundaria);
+    height: 48px;
     line-height: 1;
-    list-style: none;
     overflow: hidden;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin: -4% 0 0 4%;
-    position: relative;
-    text-align: left;
+    padding: 0 16px;
+    margin: 0;
     text-decoration: none;
-    transition: box-shadow .15s,transform .15s;
+    transition: box-shadow .15s, transform .15s;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
     white-space: nowrap;
-    will-change: box-shadow,transform;
+    will-change: box-shadow, transform;
     font-size: 18px;
 }
-  
-.button01:focus{ 
-    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+
+.button01:focus {
+    box-shadow:
+        #D6D6E7 0 0 0 1.5px inset,
+        rgba(45, 35, 66, 0.4) 0 2px 4px,
+        rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+        #D6D6E7 0 -3px 0 inset;
 }
- 
+
 .button01:hover {
-    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    box-shadow:
+        rgba(45, 35, 66, 0.4) 0 4px 8px,
+        rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+        #D6D6E7 0 -3px 0 inset;
     transform: translateY(-2px);
     color: var(--roxo);
 }
@@ -97,69 +106,94 @@
     box-shadow: #D6D6E7 0 3px 7px inset;
     transform: translateY(2px);
 }
-  
 
-@media (max-width: 1100px) {    
+/* TABLETS */
+@media (max-width: 1100px) {
     .banner {
-        padding: 3.5rem 1.5rem;
+        padding: 3rem 2rem;
+        gap: 2rem;
     }
- 
+
     .titulo {
         margin-top: 0;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
+        font-size: 2rem;
     }
- 
+
     .paragrafo {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
     }
- 
+
     .imagens {
-        height: 338px;
+        height: 320px;
     }
-   
+
     .imagens > .minhaFoto {
-        width: 25vw;
+        width: 220px;
     }
-   
+
     .imagens > .circuloColorido {
-        right: 10vw;
-        width: 35vw;
+        width: 320px;
+        right: 30px;
+        bottom: 20px;
     }
 }
- 
+
+/* CELULARES */
 @media (max-width: 744px) {
     .banner {
-        padding: 2rem 1rem;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
+        text-align: center;
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .apresentacao {
+        width: 100%;
     }
 
     .titulo {
         margin: 0;
-        padding: 0;
+        font-size: 1.8rem;
     }
- 
+
     .paragrafo {
-        margin: -5% 0 0 0;
+        margin: 1rem 0;
         padding: 0;
+        font-size: 1rem;
+        line-height: 1.7rem;
     }
- 
-    .imagens  {
-        height: 300px;
-        margin: -5% 0 10% 0;
+
+    .button {
+        display: flex;
+        justify-content: center;
     }
-   
-    .imagens > .minhaFoto {
-        width: 170px;
-        transform: translate(5.5rem, 0px);
-    }
-   
-    .imagens > .circuloColorido {
-        width: 240px;
+
+    .imagens {
+        position: relative;
+        width: 100%;
+        height: 280px;
         margin: 0;
-        padding: 0;
-        transform: translate(6.5rem, 5%);
+    }
+
+    .imagens > .circuloColorido {
+        position: absolute;
+        width: 220px;
+        left: 50%;
+        bottom: 0;
+        right: auto;
+        transform: translateX(-50%);
+    }
+
+    .imagens > .minhaFoto {
+        position: absolute;
+        width: 170px;
+        left: 50%;
+        bottom: 0;
+        right: auto;
+        transform: translateX(-50%);
+        z-index: 2;
     }
 }
-
