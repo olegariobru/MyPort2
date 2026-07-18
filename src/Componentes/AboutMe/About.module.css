@@ -9,8 +9,33 @@
 }
 
 
-.imgBanner{
-    background-image: url('Images/assets/fundo.png');   
+.SobreMe{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--branco);
+}
+
+.sobreText{
+    font-family: var(--fonte-secundaria);
+    text-align: center;
+    width: 80%;
+    padding: 10% 0 10% 0;
+    cursor: default;
+}
+
+@media (min-width: 1920px){
+
+    .textoBanner{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15% 0 0 0;
+    font-family: var(--fonte-titulos);
+    color: var(--branco);
 }
 
 
@@ -29,4 +54,8 @@
     width: 80%;
     padding: 10% 0 10% 0;
     cursor: default;
+}
+
+
+
 }

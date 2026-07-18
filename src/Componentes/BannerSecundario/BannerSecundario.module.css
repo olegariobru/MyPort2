@@ -21,3 +21,27 @@
     width: 35vw;
 }
 
+
+@media (min-width: 1920px){
+    
+.imagens {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+ 
+.imagens > .minhaFoto {
+    position: absolute;
+    top: 50%;
+    width: 18vw;
+    border-radius: 50%;
+}
+ 
+.imagens > .circuloColorido {
+    position: absolute;
+    top: 10%;
+    width: 35vw;
+}
+}
