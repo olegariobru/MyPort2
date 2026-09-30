@@ -1,6 +1,7 @@
 import styles from './projectCard.module.css'
 import fotoProjeto from 'Images/projetos/arkitetura.png'
 import fotoProjeto2 from 'Images/projetos/olguser.png'
+import fotoProjeto3 from 'Images/projetos/AccessManeg.png'
 
 export default function ProjetosCard(){
     return(
@@ -16,7 +17,7 @@ export default function ProjetosCard(){
                 <h2 className={styles.titulo}>Arktetura</h2>
                 
                 <p className={styles.subtitulo}>Projeto elaborado para uma empresa de arquitetura e urbanismo</p>
-                <button className={styles.botao}>Ver mais</button>
+                <button className={styles.botao}>Veja o projeto</button>
                 
             </div>
             <div className={styles.card}>
@@ -24,10 +25,18 @@ export default function ProjetosCard(){
                 <h2 className={styles.titulo}>OlgUsers</h2>
                 
                 <p className={styles.subtitulo}>IntraNET com sistema de login robusto e completo (Em desenvolvimento)</p>
-                <button className={styles.botao}>Ver mais</button>
+                <button className={styles.botao}>Veja o projeto</button>
                 
             </div>
 
+            <div className={styles.card}>
+                <img src={fotoProjeto3} alt="Imagem do Projeto" className={styles.imagem} />
+                <h2 className={styles.titulo}>AccessManager</h2>
+                
+                <p className={styles.subtitulo}>Projeto de gerenciamento de acessos e captura de dados particulares (Férias, Holerites e IRPFS)</p>
+                <button className={styles.botao}>Veja o projeto</button>
+                
+            </div>
         </div>
    
         </div>
