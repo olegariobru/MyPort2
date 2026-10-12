@@ -8,22 +8,22 @@
   box-shadow: 0 18px 45px rgba(0,0,0,.18);
   transition: transform .2s ease, border-color .2s ease;
 }
-.projectCard:hover { transform: translateY(-4px); border-color: rgba(213,139,212,.8); }
+.projectCard:hover { transform: translateY(-4px); border-color: rgba(212,92,174,.8); }
 .projectVisual {
   min-height: 205px; position: relative; display: grid; place-items: center; overflow: hidden;
-  background: radial-gradient(circle at 70% 20%, rgba(157,43,156,.48), transparent 42%), #0c2a52;
+  background: radial-gradient(circle at 70% 20%, rgba(143,36,95,.48), transparent 42%), #0c2a52;
 }
 .projectVisual img { width: 100%; height: 205px; object-fit: cover; }
 .projectVisual-rename, .projectVisual-python { background: linear-gradient(135deg,#092951,#1b4c83 52%,#642d78); }
 .projectMonogram { font: 700 clamp(2rem,6vw,4rem) var(--fonte-titulos); letter-spacing: .08em; color: rgba(255,255,255,.9); }
 .projectNumber { position: absolute; right: .9rem; bottom: .75rem; font: 700 .8rem var(--fonte-secundaria); color: #fff; text-shadow: 0 1px 4px #000; }
 .projectContent { padding: 1.2rem 1.25rem 1.3rem; }
-.projectType { margin: 0 0 .5rem; color: #e6b3e5; font: 700 .78rem var(--fonte-secundaria); letter-spacing: .1em; text-transform: uppercase; }
+.projectType { margin: 0 0 .5rem; color: var(--rosa-texto); font: 700 .78rem var(--fonte-secundaria); letter-spacing: .1em; text-transform: uppercase; }
 .projectContent h3 { margin: 0; font-size: 1.45rem; }
 .projectDescription { min-height: 5.2rem; margin: .75rem 0 1.1rem; color: var(--texto-suave); }
 .projectActions { display: flex; flex-wrap: wrap; gap: .75rem 1.25rem; }
-.projectLink { display: inline-flex; align-items: center; gap: .3rem; color: #fff; font-weight: 700; text-decoration: underline; text-decoration-color: #d58bd4; text-underline-offset: .25rem; }
-.projectLink:hover { color: #f2c5f0; }
+.projectLink { display: inline-flex; align-items: center; gap: .3rem; color: #fff; font-weight: 700; text-decoration: underline; text-decoration-color: var(--rosa-texto); text-underline-offset: .25rem; }
+.projectLink:hover { color: var(--rosa-texto); }
 .projectGithub { color: #dce7f7; }
 @media (max-width: 760px) { .projectGrid { grid-template-columns: 1fr; } .projectDescription { min-height: 0; } }
 @media (prefers-reduced-motion: reduce) { .projectCard { transition: none; } }
