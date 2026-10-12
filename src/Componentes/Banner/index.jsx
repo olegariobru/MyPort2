@@ -5,7 +5,6 @@ import minhaFoto from '../../Images/assets/eu2.png';
 export default function Banner() {
   return <section className="hero pageContainer" aria-labelledby="hero-title">
     <div className="heroCopy">
-      <p className="eyebrow">Tecnologia com propósito</p>
       <h1 id="hero-title">Olá, eu sou o <span>Bruno Olegário</span>.</h1>
       <p className="heroLead">Transformo desafios de TI em soluções digitais claras, úteis e confiáveis.</p>
       <div className="heroActions">
