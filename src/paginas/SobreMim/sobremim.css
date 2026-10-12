@@ -10,7 +10,7 @@
 .skillGroup h3 { margin: 0 0 1rem; font-size: 1.2rem; }
 .skillGroup ul { display: flex; flex-wrap: wrap; gap: .55rem; padding: 0; margin: 0; }
 .skillGroup li { padding: .45rem .65rem; border-radius: 999px; color: #fff; background: rgba(24,117,232,.25); font-size: .9rem; }
-.aboutCta { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-top: 3rem; padding: 1.5rem; border-radius: .7rem; background: rgba(157,43,156,.18); }
+.aboutCta { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-top: 3rem; padding: 1.5rem; border-radius: .7rem; background: rgba(143,36,95,.22); }
 .aboutCta p { margin: 0; }
 @media (max-width: 760px) {
   .aboutIntro { grid-template-columns: 1fr; gap: 1.5rem; padding-top: 1rem; }
