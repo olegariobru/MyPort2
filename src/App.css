@@ -3,9 +3,8 @@
   width: min(1120px, calc(100% - 2.5rem)); min-height: 88px; margin: 0 auto;
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
 }
-.brand { font: 700 1.55rem var(--fonte-titulos); letter-spacing: .02em; }
-.brand span { color: var(--rosa-texto); }
-.navigation { display: flex; align-items: center; gap: clamp(1rem, 4vw, 3rem); }
+.brand { font: 700 1.2rem var(--fonte-titulos); letter-spacing: -.04em; white-space: nowrap; }
+.navigation { display: flex; align-items: center; gap: clamp(1rem, 4vw, 3rem); font-family: var(--fonte-secundaria); }
 .navigation a { padding: .55rem 0; color: var(--texto-suave); font-weight: 600; }
 .navigation a:hover, .navigation a[aria-current="page"] { color: #fff; }
 .navigation a[aria-current="page"] { box-shadow: 0 2px var(--rosa-texto); }
@@ -15,7 +14,7 @@
 .button {
   min-height: 46px; display: inline-flex; align-items: center; justify-content: center;
   gap: .5rem; padding: .7rem 1rem; border: 1px solid transparent; border-radius: .45rem;
-  font-weight: 700; transition: transform .18s ease, background-color .18s ease, border-color .18s ease;
+  font-family: var(--fonte-secundaria); font-weight: 700; transition: transform .18s ease, background-color .18s ease, border-color .18s ease;
 }
 .button:hover { transform: translateY(-2px); }
 .buttonPrimary { color: #fff; background: var(--roxo); }
@@ -25,7 +24,7 @@
 @media (max-width: 640px) {
   .headerInner { width: calc(100% - 1.5rem); min-height: 72px; }
   .navigation { gap: .9rem; font-size: .9rem; }
-  .brand { font-size: 1.25rem; }
+  .brand { font-size: 1.05rem; }
 }
 @media (max-width: 380px) {
   .navigation { gap: .55rem; font-size: .82rem; }
@@ -36,7 +35,7 @@
   align-items: center; gap: 2rem; padding-top: 1rem; padding-bottom: 2rem;
 }
 .heroCopy { max-width: 620px; }
-.heroCopy h1 { margin: 0 0 .9rem; font-family: "Montserrat", sans-serif; font-size: clamp(2.2rem,4.5vw,3.8rem); line-height: 1.08; letter-spacing: -.035em; }
+.heroCopy h1 { margin: 0 0 .9rem; font-family: var(--fonte-titulos); font-size: clamp(2.2rem,4.5vw,3.8rem); line-height: 1.08; letter-spacing: -.035em; }
 .heroCopy h1 span { color: var(--rosa-texto); }
 .heroLead { max-width: 550px; margin: 0; color: var(--texto-suave); font-size: clamp(1rem,1.4vw,1.15rem); line-height: 1.65; }
 .heroPortrait { position: relative; min-height: 360px; display: grid; place-items: end center; }
