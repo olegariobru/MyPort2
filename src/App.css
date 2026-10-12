@@ -32,26 +32,26 @@
 }
 
 .hero {
-  min-height: 460px; display: grid; grid-template-columns: 1.05fr .95fr;
-  align-items: center; gap: 2rem; padding-top: 1.5rem; padding-bottom: 3rem;
+  min-height: 410px; display: grid; grid-template-columns: 1.05fr .95fr;
+  align-items: center; gap: 2rem; padding-top: 1rem; padding-bottom: 2rem;
 }
 .heroCopy { max-width: 620px; }
-.heroCopy h1 { margin: .75rem 0 1rem; font-size: clamp(2.35rem,5vw,4.3rem); }
+.heroCopy h1 { margin: 0 0 .9rem; font-size: clamp(2.2rem,4.5vw,3.8rem); line-height: 1.08; letter-spacing: -.035em; }
 .heroCopy h1 span { color: #df9ddd; }
-.heroLead { max-width: 550px; margin: 0; color: var(--texto-suave); font-size: clamp(1.05rem,1.6vw,1.25rem); }
-.heroActions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.6rem; }
-.heroPortrait { position: relative; min-height: 400px; display: grid; place-items: end center; }
-.portraitPhoto { position: relative; z-index: 1; width: min(360px,75%); border-radius: 50%; }
-.portraitRing { position: absolute; inset: auto 2% 0 auto; width: min(440px,100%); }
+.heroLead { max-width: 550px; margin: 0; color: var(--texto-suave); font-size: clamp(1rem,1.4vw,1.15rem); line-height: 1.65; }
+.heroActions { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1.3rem; }
+.heroPortrait { position: relative; min-height: 360px; display: grid; place-items: end center; }
+.portraitPhoto { position: relative; z-index: 1; width: min(340px,72%); border-radius: 50%; }
+.portraitRing { position: absolute; inset: auto 2% 0 auto; width: min(410px,100%); }
 .imgBanner { min-width: 0; }
 .imgBanner .imagens { position: relative; display: grid; place-items: center; min-height: 300px; }
 .imgBanner .circuloColorido { position: absolute; width: min(320px,100%); }
 .imgBanner .minhaFoto { position: relative; width: min(230px,72%); border-radius: 50%; }
 @media (max-width: 760px) {
-  .hero { grid-template-columns: 1fr; gap: 1rem; padding-top: 2rem; padding-bottom: 2rem; text-align: center; }
+  .hero { grid-template-columns: 1fr; gap: .75rem; padding-top: 1.5rem; padding-bottom: 1.5rem; text-align: center; }
   .heroCopy { margin: auto; }
   .heroActions { justify-content: center; }
-  .heroPortrait { min-height: 275px; }
-  .portraitPhoto { width: min(245px,68%); }
-  .portraitRing { width: min(330px,90%); right: 5%; }
+  .heroPortrait { min-height: 250px; }
+  .portraitPhoto { width: min(225px,66%); }
+  .portraitRing { width: min(300px,88%); right: 5%; }
 }
