@@ -36,7 +36,7 @@
   align-items: center; gap: 2rem; padding-top: 1rem; padding-bottom: 2rem;
 }
 .heroCopy { max-width: 620px; }
-.heroCopy h1 { margin: 0 0 .9rem; font-size: clamp(2.2rem,4.5vw,3.8rem); line-height: 1.08; letter-spacing: -.035em; }
+.heroCopy h1 { margin: 0 0 .9rem; font-family: "Montserrat", sans-serif; font-size: clamp(2.2rem,4.5vw,3.8rem); line-height: 1.08; letter-spacing: -.035em; }
 .heroCopy h1 span { color: #df9ddd; }
 .heroLead { max-width: 550px; margin: 0; color: var(--texto-suave); font-size: clamp(1rem,1.4vw,1.15rem); line-height: 1.65; }
 .heroActions { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1.3rem; }
