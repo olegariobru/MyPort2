@@ -3,55 +3,52 @@
   width: min(1120px, calc(100% - 2.5rem)); min-height: 88px; margin: 0 auto;
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
 }
-.brand { font: 700 1.55rem var(--fonte-titulos); letter-spacing: .02em; }
-.brand span { color: #d58bd4; }
-.navigation { display: flex; align-items: center; gap: clamp(1rem, 4vw, 3rem); }
+.brand { font: 400 1.2rem var(--fonte-titulos); letter-spacing: -.04em; white-space: nowrap; }
+.navigation { display: flex; align-items: center; gap: clamp(1rem, 4vw, 3rem); font-family: var(--fonte-secundaria); }
 .navigation a { padding: .55rem 0; color: var(--texto-suave); font-weight: 600; }
 .navigation a:hover, .navigation a[aria-current="page"] { color: #fff; }
-.navigation a[aria-current="page"] { box-shadow: 0 2px #d58bd4; }
+.navigation a[aria-current="page"] { box-shadow: 0 2px var(--rosa-texto); }
 .notFound { min-height: 55vh; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 1rem; }
 .notFound h1 { margin: 0; }
-.eyebrow { color: #e6b3e5; font: 700 .85rem var(--fonte-secundaria); letter-spacing: .14em; text-transform: uppercase; }
+.eyebrow { color: var(--rosa-texto); font: 700 .85rem var(--fonte-secundaria); letter-spacing: .14em; text-transform: uppercase; }
 .button {
   min-height: 46px; display: inline-flex; align-items: center; justify-content: center;
   gap: .5rem; padding: .7rem 1rem; border: 1px solid transparent; border-radius: .45rem;
-  font-weight: 700; transition: transform .18s ease, background-color .18s ease, border-color .18s ease;
+  font-family: var(--fonte-secundaria); font-weight: 700; transition: transform .18s ease, background-color .18s ease, border-color .18s ease;
 }
 .button:hover { transform: translateY(-2px); }
 .buttonPrimary { color: #fff; background: var(--roxo); }
-.buttonPrimary:hover { background: #7e217d; }
+.buttonPrimary:hover { background: #711747; }
 .buttonSecondary { border-color: rgba(255,255,255,.55); background: rgba(4,24,51,.45); }
 .buttonSecondary:hover { background: rgba(255,255,255,.1); }
 @media (max-width: 640px) {
   .headerInner { width: calc(100% - 1.5rem); min-height: 72px; }
   .navigation { gap: .9rem; font-size: .9rem; }
-  .brand { font-size: 1.25rem; }
+  .brand { font-size: 1.05rem; }
 }
 @media (max-width: 380px) {
   .navigation { gap: .55rem; font-size: .82rem; }
 }
 
 .hero {
-  min-height: 460px; display: grid; grid-template-columns: 1.05fr .95fr;
-  align-items: center; gap: 2rem; padding-top: 1.5rem; padding-bottom: 3rem;
+  min-height: 410px; display: grid; grid-template-columns: 1.05fr .95fr;
+  align-items: center; gap: 2rem; padding-top: 1rem; padding-bottom: 2rem;
 }
 .heroCopy { max-width: 620px; }
-.heroCopy h1 { margin: .75rem 0 1rem; font-size: clamp(2.35rem,5vw,4.3rem); }
-.heroCopy h1 span { color: #df9ddd; }
-.heroLead { max-width: 550px; margin: 0; color: var(--texto-suave); font-size: clamp(1.05rem,1.6vw,1.25rem); }
-.heroActions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.6rem; }
-.heroPortrait { position: relative; min-height: 400px; display: grid; place-items: end center; }
-.portraitPhoto { position: relative; z-index: 1; width: min(360px,75%); border-radius: 50%; }
-.portraitRing { position: absolute; inset: auto 2% 0 auto; width: min(440px,100%); }
+.heroCopy h1 { margin: 0 0 .9rem; font-family: var(--fonte-titulos); font-size: clamp(2.2rem,4.5vw,3.8rem); line-height: 1.08; letter-spacing: -.035em; }
+.heroCopy h1 span { color: var(--rosa-texto); }
+.heroLead { max-width: 550px; margin: 0; color: var(--texto-suave); font-size: clamp(1rem,1.4vw,1.15rem); line-height: 1.65; }
+.heroPortrait { position: relative; min-height: 360px; display: grid; place-items: end center; }
+.portraitPhoto { position: relative; z-index: 1; width: min(340px,72%); border-radius: 50%; }
+.portraitRing { position: absolute; inset: auto 2% 0 auto; width: min(410px,100%); }
 .imgBanner { min-width: 0; }
 .imgBanner .imagens { position: relative; display: grid; place-items: center; min-height: 300px; }
 .imgBanner .circuloColorido { position: absolute; width: min(320px,100%); }
 .imgBanner .minhaFoto { position: relative; width: min(230px,72%); border-radius: 50%; }
 @media (max-width: 760px) {
-  .hero { grid-template-columns: 1fr; gap: 1rem; padding-top: 2rem; padding-bottom: 2rem; text-align: center; }
+  .hero { grid-template-columns: 1fr; gap: .75rem; padding-top: 1.5rem; padding-bottom: 1.5rem; text-align: center; }
   .heroCopy { margin: auto; }
-  .heroActions { justify-content: center; }
-  .heroPortrait { min-height: 275px; }
-  .portraitPhoto { width: min(245px,68%); }
-  .portraitRing { width: min(330px,90%); right: 5%; }
+  .heroPortrait { min-height: 250px; }
+  .portraitPhoto { width: min(225px,66%); }
+  .portraitRing { width: min(300px,88%); right: 5%; }
 }
