@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { Link, NavLink, Route, Routes, useLocation } from 'react-router-dom';
 import Banner from './Componentes/Banner';
 import Footer from './Componentes/Footer';
-import Inicio from './paginas/Inicio/Index';
 import Projetos from './paginas/Projetos';
 import SobreMim from './paginas/SobreMim/Index';
 import './App.css';
@@ -42,7 +41,7 @@ export default function App() {
     </header>
     <main id="main-content">
       <Routes>
-        <Route path="/" element={<><Banner /><Inicio /></>} />
+        <Route path="/" element={<Banner />} />
         <Route path="/projetos" element={<Projetos />} />
         <Route path="/sobre-mim" element={<SobreMim />} />
         <Route path="/Projetos" element={<Projetos />} />
