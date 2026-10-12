@@ -9,9 +9,18 @@ const socials = [
 ];
 export default function Footer() {
   return <footer className={styles.siteFooter}>
+    <section className={styles.contactSection} aria-labelledby="footer-contact-title">
+      <div className={`${styles.contactInner} pageContainer`}>
+        <div className={styles.contactCopy}>
+          <p className="eyebrow">Vamos conversar?</p>
+          <h2 id="footer-contact-title">Tem um desafio em mente?</h2>
+        </div>
+        <a className="button buttonPrimary" href="mailto:b_olgr@icloud.com">Entre em contato <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
     <div className={`${styles.footerInner} pageContainer`}>
       <p>© {new Date().getFullYear()} Bruno Olegário</p>
-      <ul aria-label="Redes sociais">
+      <ul className={styles.socialLinks} aria-label="Redes sociais">
         {socials.map(({ label, href, Icon }) => <li key={label}>
           <a href={href} target="_blank" rel="noreferrer" aria-label={label}><Icon aria-hidden="true" /></a>
         </li>)}
