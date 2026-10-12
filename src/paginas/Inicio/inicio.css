@@ -1,0 +1,11 @@
+.homeProjects { padding-top: 1rem; padding-bottom: 5rem; }
+.sectionHeader { display: grid; grid-template-columns: 1fr minmax(250px, .8fr); align-items: end; gap: 2rem; }
+.sectionHeader .sectionIntro { margin: 0 0 .5rem; }
+.sectionCta { display: flex; justify-content: center; margin-top: 2rem; }
+.contactBand { border-top: 1px solid rgba(255,255,255,.15); background: rgba(4,24,51,.55); }
+.contactInner { min-height: 190px; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+.contactInner h2 { margin: .35rem 0 0; font-size: clamp(1.7rem,3vw,2.4rem); }
+@media (max-width: 700px) {
+  .sectionHeader { grid-template-columns: 1fr; gap: .75rem; }
+  .contactInner { align-items: flex-start; flex-direction: column; justify-content: center; padding-top: 2rem; padding-bottom: 2rem; }
+}

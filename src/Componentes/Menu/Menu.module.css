@@ -1,13 +1,4 @@
-.navegacao {
-    height: 112px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 3rem;
-}
-
-@media (max-width: 744px) {
-    .navegacao {
-        height: 72px;
-    }
-}
+.siteHeader { display: block; }
+.navigation { display: flex; justify-content: center; align-items: center; gap: 2rem; min-height: 72px; }
+.navigation a { color: var(--texto-suave); }
+.navigation a[aria-current="page"] { color: white; text-decoration: underline; text-underline-offset: .3em; }

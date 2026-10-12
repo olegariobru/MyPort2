@@ -1,52 +1,48 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body{
-  background-image: url('Images/assets/fundo2.png');
-}
-
+* { box-sizing: border-box; }
 :root {
+  color-scheme: dark;
   --azul-escuro: #041833;
   --azul-medio: #1875E8;
   --roxo: #9d2b9c;
-  --cor-fonte-principal: #041833;
-  --cor-fonte-post: #444444;
-  --branco: #FFF;
-  --preto: #000000;
+  --branco: #fff;
+  --texto-suave: #e3eaf4;
+  --painel: rgba(4, 24, 51, 0.88);
   --fonte-principal: "Cagliostro", sans-serif;
   --fonte-secundaria: "Ubuntu Mono", monospace;
   --fonte-footer: "Raleway", sans-serif;
   --fonte-titulos: "Play", sans-serif;
+  font-family: var(--fonte-footer);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
 }
-
-#root {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns: minmax(0, 1fr);
+html { min-width: 320px; scroll-behavior: smooth; }
+body {
+  min-width: 320px;
   min-height: 100vh;
+  margin: 0;
+  color: var(--branco);
+  background: var(--azul-escuro) url('./Images/assets/fundo2.png') center / cover fixed;
 }
-
-a, button, input, textarea {
-  font: inherit;
-  color: inherit;
+body, button, a { font-family: var(--fonte-footer); }
+button, a { color: inherit; }
+a { text-decoration: none; }
+img { display: block; max-width: 100%; }
+h1, h2, h3 { font-family: var(--fonte-titulos); line-height: 1.15; }
+p { line-height: 1.7; }
+:focus-visible { outline: 3px solid #f7c843; outline-offset: 4px; }
+.skipLink {
+  position: fixed; top: .75rem; left: .75rem; z-index: 10;
+  padding: .75rem 1rem; color: var(--azul-escuro); background: var(--branco);
+  border-radius: .4rem; transform: translateY(-160%);
 }
-
-button {
-  background-color: transparent;
+.skipLink:focus { transform: translateY(0); }
+.pageContainer { width: min(1120px, calc(100% - 2.5rem)); margin: 0 auto; }
+.sectionHeading { margin: 0 0 .75rem; font-size: clamp(2rem, 4vw, 3rem); }
+.sectionIntro { max-width: 680px; margin: 0 auto; color: var(--texto-suave); }
+@media (max-width: 640px) {
+  body { background-attachment: scroll; }
+  .pageContainer { width: min(100% - 1.5rem, 1120px); }
 }
-
-a {
-  text-decoration: none;
-}
-
-li {
-  list-style: none;
-}
-
-h1, h2, h3 {
-  font-weight: 700;
-  line-height: 5rem;
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }

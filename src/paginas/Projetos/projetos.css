@@ -1,0 +1,3 @@
+.projectsPage { min-height: 68vh; padding-top: 2.5rem; padding-bottom: 5rem; }
+.projectsPage > .sectionIntro { margin: 0; }
+.projectsPage .projectGrid { margin-top: 2rem; }
