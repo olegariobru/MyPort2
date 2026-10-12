@@ -43,7 +43,7 @@ Os links de apresentação indicam claramente quando levam a uma demonstração 
 
 ## Acessibilidade e telas menores
 
-O site inclui link para pular ao conteúdo, navegação identificada, foco visível, nomes acessíveis em ícones, imagens decorativas ocultas para leitores de tela e suporte a preferência por movimento reduzido. A grade se adapta a telas estreitas.
+O site inclui link para pular ao conteúdo, navegação identificada, foco visível, nomes acessíveis em ícones, imagens decorativas ocultas para leitores de tela e suporte a preferência por movimento reduzido. A grade se adapta a telas estreitas. Os testes também verificam esses contratos de navegação, foco, preferência de movimento e breakpoints; a inspeção visual manual no navegador continua recomendada.
 
 ## Autor
 
