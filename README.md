@@ -6,6 +6,7 @@ Portfólio pessoal em português para apresentar experiência em Tecnologia da I
 
 - React 18 e React Router
 - Vite 8
+- Componentes React com JSX em arquivos `.jsx`
 - CSS responsivo e CSS Modules compatíveis
 - Testes de dados com o runner nativo do Node.js
 
