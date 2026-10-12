@@ -3,7 +3,7 @@
   width: min(1120px, calc(100% - 2.5rem)); min-height: 88px; margin: 0 auto;
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
 }
-.brand { font: 700 1.2rem var(--fonte-titulos); letter-spacing: -.04em; white-space: nowrap; }
+.brand { font: 400 1.2rem var(--fonte-titulos); letter-spacing: -.04em; white-space: nowrap; }
 .navigation { display: flex; align-items: center; gap: clamp(1rem, 4vw, 3rem); font-family: var(--fonte-secundaria); }
 .navigation a { padding: .55rem 0; color: var(--texto-suave); font-weight: 600; }
 .navigation a:hover, .navigation a[aria-current="page"] { color: #fff; }
