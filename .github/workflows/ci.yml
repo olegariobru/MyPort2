@@ -1,4 +1,4 @@
-name: Build
+name: Portfolio CI
 
 on:
   push:
@@ -6,20 +6,32 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  build:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
-      - name: Install dependencies
+      - name: Regenerate the dependency lockfile
+        run: npm install --package-lock-only --ignore-scripts
+      - name: Save the generated lockfile to this pull request branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package-lock.json
+          git diff --cached --quiet || (git commit -m "build: refresh Vite dependency lockfile" && git push)
+      - name: Install locked dependencies
         run: npm ci
+      - name: Run tests
+        run: npm test
       - name: Create production build
         run: npm run build

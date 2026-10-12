@@ -1,45 +1,32 @@
-import styles from './projectCard.module.css'
-import fotoProjeto from 'Images/projetos/arkitetura.png'
-import fotoProjeto2 from 'Images/projetos/olguser.png'
-import fotoProjeto3 from 'Images/projetos/AccessManeg.png'
+import arkImage from '../../Images/projetos/arkitetura.png';
+import accessImage from '../../Images/projetos/AccessManeg.png';
+import { projects } from '../../data/projects';
+import styles from './projectCard.module.css';
 
-export default function ProjetosCard(){
-    return(
-        <div>
-            <div className={styles.textoBanner}>
-                <h2>
-                    Meus projetos
-                </h2>
-            </div>       
-        <div className={styles.cards}>
-            <div className={styles.card}>
-                <img src={fotoProjeto} alt="Imagem do Projeto" className={styles.imagem} />
-                <h2 className={styles.titulo}>Arktetura</h2>
-                
-                <p className={styles.subtitulo}>Projeto elaborado para uma empresa de arquitetura e urbanismo</p>
-                <button className={styles.botao}>Veja o projeto</button>
-                
-            </div>
-            <div className={styles.card}>
-                <img src={fotoProjeto2} alt="Imagem do Projeto" className={styles.imagem} />
-                <h2 className={styles.titulo}>OlgUsers</h2>
-                
-                <p className={styles.subtitulo}>IntraNET com sistema de login robusto e completo (Em desenvolvimento)</p>
-                <button className={styles.botao}>Veja o projeto</button>
-                
-            </div>
-
-            <div className={styles.card}>
-                <img src={fotoProjeto3} alt="Imagem do Projeto" className={styles.imagem} />
-                <h2 className={styles.titulo}>AccessManager</h2>
-                
-                <p className={styles.subtitulo}>Projeto de gerenciamento de acessos e captura de dados particulares (Férias, Holerites e IRPFS)</p>
-                <button className={styles.botao}>Veja o projeto</button>
-                
-            </div>
+const covers = { access: accessImage, architecture: arkImage };
+export default function ProjectCards({ featured = false }) {
+  const visibleProjects = featured ? projects.slice(0, 2) : projects;
+  return <div className={styles.projectGrid}>
+    {visibleProjects.map((project, index) => <article className={styles.projectCard} key={project.slug}>
+      <div className={`${styles.projectVisual} ${styles[`projectVisual-${project.cover}`] || ''}`}>
+        {covers[project.cover]
+          ? <img src={covers[project.cover]} alt="" loading={index > 1 ? 'lazy' : 'eager'} />
+          : <span className={styles.projectMonogram} aria-hidden="true">{project.monogram}</span>}
+        <span className={styles.projectNumber}>{String(index + 1).padStart(2, '0')}</span>
+      </div>
+      <div className={styles.projectContent}>
+        <p className={styles.projectType}>{project.type}</p>
+        <h3>{project.name}</h3>
+        <p className={styles.projectDescription}>{project.description}</p>
+        <div className={styles.projectActions}>
+          <a className={styles.projectLink} href={project.showcaseUrl} target="_blank" rel="noreferrer">
+            {project.showcaseLabel} <span aria-hidden="true">↗</span>
+          </a>
+          <a className={`${styles.projectLink} ${styles.projectGithub}`} href={project.repositoryUrl} target="_blank" rel="noreferrer">
+            GitHub <span aria-hidden="true">↗</span>
+          </a>
         </div>
-   
-        </div>
-    
-    )
+      </div>
+    </article>)}
+  </div>;
 }

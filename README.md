@@ -1,60 +1,49 @@
 # Portfólio — Bruno Olegário
 
-Portfólio pessoal desenvolvido com React para apresentar minha experiência em TI, tecnologias e projetos de desenvolvimento web.
+Portfólio pessoal em português para apresentar experiência em Tecnologia da Informação e projetos de desenvolvimento.
 
-## Funcionalidades
+## Stack
 
-- Navegação entre início, projetos e apresentação profissional.
-- Componentes reutilizáveis para menu, banners, cards e rodapé.
-- Estilização com CSS Modules.
-- Links para projetos e canais de contato.
+- React 18 e React Router
+- Vite 8
+- CSS responsivo e CSS Modules compatíveis
+- Testes de dados com o runner nativo do Node.js
 
-## Tecnologias
+## Requisitos
 
-React 18, JavaScript, React Router, CSS Modules, Framer Motion e React Icons. O ambiente de desenvolvimento utiliza Create React App.
+Node.js 22.12 ou superior e npm.
 
-## Como executar
-
-Pré-requisitos: Node.js e npm compatíveis com as dependências do projeto.
+## Desenvolvimento
 
 ```bash
-git clone https://github.com/olegariobru/MyPort2.git
-cd MyPort2
 npm ci
-npm start
+npm run dev
 ```
 
-Acesse `http://localhost:3000`.
+Abra o endereço local exibido pelo Vite (normalmente `http://localhost:5173`).
 
-## Build e verificação
+## Build e testes
 
 ```bash
+npm test
 npm run build
+npm run preview
 ```
 
-O build é gerado em `build/`. Verifique as três páginas, os links dos cards, os contatos e o comportamento em diferentes larguras de tela.
+O build de produção é criado em `dist/`. O workflow do GitHub instala as dependências do lockfile, executa os testes e valida o build em cada push e pull request.
 
-O script `npm test` está disponível pelo Create React App; isso não significa que o projeto possua uma suíte de testes própria.
+## Estrutura
 
-## Organização
+- `src/paginas/`: início, projetos e sobre mim.
+- `src/Componentes/`: navegação, apresentação, cards e rodapé.
+- `src/data/projects.js`: dados e links dos projetos priorizados.
+- `public/`: manifesto, favicon e sitemap.
 
-- `src/Componentes/`: componentes e respectivos estilos.
-- `src/paginas/`: páginas de início, projetos e apresentação.
-- `public/`: arquivos estáticos.
+Os links de apresentação indicam claramente quando levam a uma demonstração ao vivo, capturas de tela ou instruções no README.
 
-## Próximas melhorias
+## Acessibilidade e telas menores
 
-- Adicionar testes de navegação e componentes.
-- Revisar acessibilidade e apresentação em dispositivos móveis.
-- Atualizar os projetos apresentados conforme sua evolução.
-
-## Como contribuir
-
-Abra uma issue com o problema ou a melhoria proposta. Para enviar código, crie um fork e uma branch, mantenha a alteração focada e abra um pull request explicando o resultado e como verificou o funcionamento.
-
-## Licença
-
-Este repositório ainda não contém um arquivo `LICENSE`. A licença de uso e redistribuição precisa ser formalizada pelo autor.
+O site inclui link para pular ao conteúdo, navegação identificada, foco visível, nomes acessíveis em ícones, imagens decorativas ocultas para leitores de tela e suporte a preferência por movimento reduzido. A grade se adapta a telas estreitas.
 
 ## Autor
 

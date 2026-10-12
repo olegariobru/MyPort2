@@ -1,19 +1,21 @@
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { IoLogoWhatsapp } from 'react-icons/io5';
 import styles from './Footer.module.css';
-import { IoLogoWhatsapp } from "react-icons/io5";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa6";
 
+const socials = [
+  { label: 'WhatsApp', href: 'https://api.whatsapp.com/send?phone=5511982883229', Icon: IoLogoWhatsapp },
+  { label: 'GitHub', href: 'https://github.com/olegariobru', Icon: FaGithub },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/bolgarimacedo/', Icon: FaLinkedin },
+];
 export default function Footer() {
-    return (
-        <div className={styles.FooterDad}>
-            <footer>
-                <ul className={styles.socialMedias}>
-                    <li><a href="https://api.whatsapp.com/send?phone=5511982883229" target="_blank" rel="noopener noreferrer"><IoLogoWhatsapp /></a></li>
-                    <li><a href="https://github.com/olegariobru" target="_blank" rel="noopener noreferrer"><FaGithub /></a></li>
-                    <li><a href="https://www.linkedin.com/in/https://www.linkedin.com/in/bolgarimacedo/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a></li>
-                </ul>
-                <p className={styles.legal}>© 2024 Created by me</p>
-            </footer>
-        </div>
-    );
+  return <footer className={styles.siteFooter}>
+    <div className={`${styles.footerInner} pageContainer`}>
+      <p>© {new Date().getFullYear()} Bruno Olegário</p>
+      <ul aria-label="Redes sociais">
+        {socials.map(({ label, href, Icon }) => <li key={label}>
+          <a href={href} target="_blank" rel="noreferrer" aria-label={label}><Icon aria-hidden="true" /></a>
+        </li>)}
+      </ul>
+    </div>
+  </footer>;
 }
