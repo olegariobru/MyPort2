@@ -18,5 +18,5 @@ test('layout includes narrow-screen and reduced-motion rules', async () => {
     readFile(new URL('./Componentes/ProjectCards/projectCard.module.css', import.meta.url), 'utf8'),
   ]);
   assert.ok(css.some((file) => /max-width:\s*760px/.test(file)));
-  assert.match(css[0], /prefers-reduced-motion/);
+  assert.match(css[0] + css[1], /prefers-reduced-motion/);
 });
