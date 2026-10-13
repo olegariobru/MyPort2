@@ -20,10 +20,10 @@ export default function ProjectCards({ featured = false }) {
         <p className={styles.projectDescription}>{project.description}</p>
         <div className={styles.projectActions}>
           <a className={styles.projectLink} href={project.showcaseUrl} target="_blank" rel="noreferrer">
-            {project.showcaseLabel} <span aria-hidden="true">↗</span>
+            {project.showcaseLabel}
           </a>
           <a className={`${styles.projectLink} ${styles.projectGithub}`} href={project.repositoryUrl} target="_blank" rel="noreferrer">
-            GitHub <span aria-hidden="true">↗</span>
+            GitHub
           </a>
         </div>
       </div>
