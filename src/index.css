@@ -1,13 +1,12 @@
 * { box-sizing: border-box; }
 :root {
   color-scheme: dark;
-  --azul-escuro: #041833;
-  --azul-medio: #1875E8;
+  --azul-escuro: #000;
   --roxo: #19191b;
-  --rosa-texto: #b19ca4;
+  --rosa-texto: #c0527c;
   --branco: #fff;
   --texto-suave: #e3eaf4;
-  --painel: rgba(4, 24, 51, 0.88);
+  --painel: rgba(15, 15, 16, 0.9);
   --fonte-principal: "Open Sans", sans-serif;
   --fonte-secundaria: "Roboto", sans-serif;
   --fonte-footer: "Open Sans", sans-serif;
@@ -22,7 +21,7 @@ body {
   min-height: 100vh;
   margin: 0;
   color: var(--branco);
-  background: var(--azul-escuro) url('./Images/assets/fundo2.png') center / cover fixed;
+  background: #000;
 }
 body, button, a { font-family: var(--fonte-footer); }
 button, a { color: inherit; }
@@ -43,7 +42,6 @@ p { line-height: 1.7; }
 .sectionHeading { margin: 0 0 .75rem; font-size: clamp(2rem, 4vw, 3rem); }
 .sectionIntro { max-width: 680px; margin: 0 auto; color: var(--texto-suave); }
 @media (max-width: 640px) {
-  body { background-attachment: scroll; }
   .pageContainer { width: min(100% - 1.5rem, 1120px); }
 }
 @media (prefers-reduced-motion: reduce) {
