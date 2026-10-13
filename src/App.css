@@ -1,4 +1,4 @@
-.siteHeader { position: relative; z-index: 2; }
+ .siteHeader { position: relative; z-index: 2; }
 .headerInner {
   width: min(1120px, calc(100% - 2.5rem)); min-height: 88px; margin: 0 auto;
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
@@ -34,9 +34,9 @@
 .button:hover { transform: translateY(-2px); }
 .button:hover::after { transform: translateX(.22rem); }
 .buttonPrimary { color: #fff; background: #19191b; border-color: #37373a; }
-.buttonPrimary:hover { background: #333336; border-color: #555559; }
-.buttonSecondary { border-color: rgba(255,255,255,.45); background: rgba(18,18,19,.72); }
-.buttonSecondary:hover { background: #303033; border-color: #66666a; }
+.buttonPrimary:hover { background: #711747; border-color: #711747; }
+.buttonSecondary { border-color: rgba(255,255,255,.55); background: rgba(4,24,51,.45); }
+.buttonSecondary:hover { background: rgba(255,255,255,.1); }
 @media (max-width: 640px) {
   .headerInner { width: calc(100% - 1.5rem); min-height: 72px; }
   .navigation { gap: .9rem; font-size: .9rem; }
