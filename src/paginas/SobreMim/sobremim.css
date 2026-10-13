@@ -5,12 +5,12 @@
 .aboutIntro .imagens > .minhaFoto { width: min(250px,70%); }
 .aboutIntro .imagens > .circuloColorido { width: min(320px,95%); }
 .skillsSection { border-top: 1px solid rgba(255,255,255,.15); padding-top: 3rem; }
-.skillsGrid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; margin-top: 1.5rem; }
-.skillGroup { padding: 1.25rem; border: 1px solid rgba(255,255,255,.16); border-radius: .7rem; background: rgba(4,24,51,.55); }
+.skillsGrid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.25rem; margin-top: 1.75rem; }
+.skillGroup { padding: 1.25rem; border: 1px solid rgba(255,255,255,.16); border-radius: .7rem; background: rgba(18,18,19,.72); }
 .skillGroup h3 { margin: 0 0 1rem; font-family: var(--fonte-titulos); font-size: 1.2rem; }
 .skillGroup ul { display: flex; flex-wrap: wrap; gap: .55rem; list-style: none; padding: 0; margin: 0; }
-.skillGroup li { padding: .45rem .65rem; border-radius: 999px; color: #fff; background: rgba(24,117,232,.25); font-family: var(--fonte-secundaria); font-size: .9rem; }
-.aboutCta { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-top: 3rem; padding: 1.5rem; border-radius: .7rem; background: rgba(143,36,95,.22); }
+.skillGroup li { padding: .45rem .65rem; border: 1px solid rgba(255,255,255,.12); border-radius: 999px; color: #fff; background: #29292b; font-family: var(--fonte-secundaria); font-size: .9rem; }
+.aboutCta { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-top: 3rem; padding: 1.5rem; border: 1px solid rgba(255,255,255,.12); border-radius: .7rem; background: rgba(18,18,19,.72); }
 .aboutCta p { margin: 0; }
 @media (max-width: 760px) {
   .aboutIntro { grid-template-columns: 1fr; gap: 1.5rem; padding-top: 1rem; }
