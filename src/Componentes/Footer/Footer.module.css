@@ -3,7 +3,7 @@
 .contactInner { min-height: 190px; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
 .contactInner :global(.buttonPrimary) { background: #19191b; border-color: #37373a; }
 .contactInner :global(.buttonPrimary:hover) { background: #303033; border-color: #555559; }
-.contactCopy .eyebrow { color: #b8b8c0; }
+.contactCopy .eyebrow { color: var(--rosa-texto); }
 .contactCopy h2 { margin: .35rem 0 0; font-size: clamp(1.7rem,3vw,2.4rem); }
 .footerInner { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; color: var(--texto-suave); font-size: .9rem; }
 .footerInner p { margin: 0; }
