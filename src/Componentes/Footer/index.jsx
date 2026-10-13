@@ -15,7 +15,7 @@ export default function Footer() {
           <p className="eyebrow">Vamos conversar?</p>
           <h2 id="footer-contact-title">Tem um desafio em mente?</h2>
         </div>
-        <a className="button buttonPrimary" href="mailto:b_olgr@icloud.com">Entre em contato <span aria-hidden="true">↗</span></a>
+        <a className="button buttonPrimary" href="mailto:b_olgr@icloud.com">Entre em contato</a>
       </div>
     </section>
     <div className={`${styles.footerInner} pageContainer`}>
