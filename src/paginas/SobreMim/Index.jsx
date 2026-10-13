@@ -24,7 +24,7 @@ export default function SobreMim() {
     </section>
     <section className="aboutCta">
       <p>Quer conhecer o que venho construindo?</p>
-      <Link className="button buttonPrimary" to="/projetos">Explorar projetos <span aria-hidden="true">↗</span></Link>
+      <Link className="button buttonPrimary" to="/projetos">Explorar projetos</Link>
     </section>
   </div>;
 }
