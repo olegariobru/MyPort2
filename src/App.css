@@ -1,9 +1,10 @@
- .siteHeader { position: relative; z-index: 2; }
+.siteHeader { position: relative; z-index: 2; }
 .headerInner {
   width: min(1120px, calc(100% - 2.5rem)); min-height: 88px; margin: 0 auto;
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
 }
 .brand { font: 400 1.2rem var(--fonte-titulos); letter-spacing: -.04em; white-space: nowrap; }
+.brandMobile { display: none; }
 .navigation { display: flex; align-items: center; gap: clamp(1rem, 4vw, 3rem); font-family: var(--fonte-secundaria); }
 .navigation a { padding: .55rem 0; color: var(--texto-suave); font-weight: 600; }
 .navigation a:hover, .navigation a[aria-current="page"] { color: #fff; }
@@ -37,13 +38,15 @@
 .button:hover { transform: translateY(-2px); }
 .button:hover::after { transform: translateX(.22rem); }
 .buttonPrimary { color: #fff; background: #19191b; border-color: #37373a; }
-.buttonPrimary:hover { background: #711747; border-color: #711747; }
-.buttonSecondary { border-color: rgba(255,255,255,.55); background: rgba(4,24,51,.45); }
+.buttonPrimary:hover { background: var(--rosa-texto); border-color: var(--rosa-texto); }
+.buttonSecondary { border-color: rgba(255,255,255,.55); background: rgba(20,20,22,.72); }
 .buttonSecondary:hover { background: rgba(255,255,255,.1); }
 @media (max-width: 640px) {
   .headerInner { width: calc(100% - 1.5rem); min-height: 72px; }
   .navigation { gap: .9rem; font-size: .9rem; }
   .brand { font-size: 1.05rem; }
+  .brandDesktop { display: none; }
+  .brandMobile { display: inline; }
 }
 @media (max-width: 380px) {
   .navigation { gap: .55rem; font-size: .82rem; }
