@@ -15,7 +15,7 @@
 }
 .projectCard:hover {
   transform: translateY(-4px);
-  border-color: rgba(177,156,164,.8);
+  border-color: rgba(192,82,124,.8);
   box-shadow: 0 18px 38px rgba(0,0,0,.3);
 }
 .projectVisual {
