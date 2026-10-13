@@ -31,7 +31,10 @@ export default function App() {
     <a className="skipLink" href="#main-content">Pular para o conteúdo</a>
     <header className="siteHeader">
       <div className="headerInner">
-        <Link className="brand" to="/" aria-label="Bruno Olegário, página inicial">{'<bruno.dev>'}</Link>
+        <Link className="brand" to="/" aria-label="Bruno Olegário, página inicial">
+          <span className="brandDesktop">{'<bruno.dev>'}</span>
+          <span className="brandMobile">#BO.DEV</span>
+        </Link>
         <nav className="navigation" aria-label="Navegação principal">
           <NavLink to="/" end>Início</NavLink>
           <NavLink to="/projetos">Projetos</NavLink>
