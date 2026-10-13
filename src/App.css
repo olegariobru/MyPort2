@@ -118,9 +118,26 @@
   align-items: center; gap: 2rem; padding-top: 1rem; padding-bottom: 2rem;
 }
 .heroCopy { max-width: 620px; }
-.heroCopy h1 { margin: 0 0 .9rem; font-family: var(--fonte-titulos); font-size: clamp(2.2rem,4.5vw,3.8rem); line-height: 1.08; letter-spacing: -.035em; }
+.heroRole {
+  margin: 0 0 .8rem;
+  color: var(--rosa-texto);
+  font-family: var(--fonte-secundaria);
+  font-size: clamp(.82rem, 1.2vw, .95rem);
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.heroCopy h1 {
+  max-width: 680px;
+  margin: 0;
+  font-family: "Space Grotesk", var(--fonte-titulos);
+  font-size: clamp(2.45rem, 5.4vw, 4.65rem);
+  font-weight: 600;
+  line-height: .98;
+  letter-spacing: -.055em;
+  text-wrap: balance;
+}
 .heroCopy h1 span { color: var(--rosa-texto); }
-.heroLead { max-width: 550px; margin: 0; color: var(--texto-suave); font-size: clamp(1rem,1.4vw,1.15rem); line-height: 1.65; }
 .heroPortrait { position: relative; min-height: 360px; display: grid; place-items: end center; }
 .portraitPhoto { position: relative; z-index: 1; width: min(340px,72%); border-radius: 50%; }
 .portraitRing { position: absolute; inset: auto 2% 0 auto; width: min(410px,100%); }
