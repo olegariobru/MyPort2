@@ -7,9 +7,9 @@ const socials = [
   { label: 'GitHub', href: 'https://github.com/olegariobru', Icon: FaGithub },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/bolgarimacedo/', Icon: FaLinkedin },
 ];
-export default function Footer() {
+export default function Footer({ showContact = false }) {
   return <footer className={styles.siteFooter}>
-    <section className={styles.contactSection} aria-labelledby="footer-contact-title">
+    {showContact && <section className={styles.contactSection} aria-labelledby="footer-contact-title">
       <div className={`${styles.contactInner} pageContainer`}>
         <div className={styles.contactCopy}>
           <p className="eyebrow">Vamos conversar?</p>
@@ -17,7 +17,7 @@ export default function Footer() {
         </div>
         <a className="button buttonPrimary" href="mailto:b_olgr@icloud.com">Entre em contato</a>
       </div>
-    </section>
+    </section>}
     <div className={`${styles.footerInner} pageContainer`}>
       <p>© {new Date().getFullYear()} Bruno Olegário</p>
       <ul className={styles.socialLinks} aria-label="Redes sociais">

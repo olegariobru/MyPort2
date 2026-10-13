@@ -41,15 +41,57 @@
 .buttonPrimary:hover { background: var(--rosa-texto); border-color: var(--rosa-texto); }
 .buttonSecondary { border-color: rgba(255,255,255,.55); background: rgba(20,20,22,.72); }
 .buttonSecondary:hover { background: rgba(255,255,255,.1); }
+.menuToggle { display: none; }
 @media (max-width: 640px) {
-  .headerInner { width: calc(100% - 1.5rem); min-height: 72px; }
-  .navigation { gap: .9rem; font-size: .9rem; }
+  .headerInner { width: calc(100% - 1.5rem); min-height: 72px; flex-wrap: wrap; gap: 0; }
   .brand { font-size: 1.05rem; }
   .brandDesktop { display: none; }
   .brandMobile { display: inline; }
-}
-@media (max-width: 380px) {
-  .navigation { gap: .55rem; font-size: .82rem; }
+  .menuToggle {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 5px; width: 44px; height: 44px; padding: 10px;
+    border: 1px solid rgba(255,255,255,.25); border-radius: .45rem;
+    background: rgba(20,20,22,.8); cursor: pointer;
+    transition: background-color .25s ease, border-color .25s ease;
+  }
+  .menuToggle:hover { background: rgba(40,40,43,.9); border-color: var(--rosa-texto); }
+  .menuToggle:active { background: rgba(60,40,50,.9); }
+  .menuToggle span {
+    display: block; width: 22px; height: 2px; border-radius: 2px; background: currentColor;
+    transform-origin: center;
+    translate: 0 0; rotate: 0deg;
+    transition: translate .22s cubic-bezier(.4,0,.2,1) .18s,
+      rotate .22s cubic-bezier(.4,0,.2,1), opacity .18s ease .18s, scale .22s ease .18s;
+  }
+  .menuOpen .menuToggle span {
+    transition: translate .22s cubic-bezier(.4,0,.2,1),
+      rotate .22s cubic-bezier(.4,0,.2,1) .18s, opacity .18s ease, scale .22s ease;
+  }
+  .menuOpen .menuToggle span:nth-child(1) { translate: 0 7px; rotate: 45deg; }
+  .menuOpen .menuToggle span:nth-child(2) { opacity: 0; scale: .4 1; }
+  .menuOpen .menuToggle span:nth-child(3) { translate: 0 -7px; rotate: -45deg; }
+  .navigation {
+    flex: 0 0 100%; min-height: 0; max-height: 0; overflow: hidden;
+    flex-direction: column; align-items: stretch; gap: .25rem;
+    padding: 0 .75rem; margin-bottom: 0; border-radius: .6rem; background: rgba(15,15,16,.96);
+    font-size: 1rem; opacity: 0; visibility: hidden; transform: translateY(-8px);
+    transition: max-height .42s cubic-bezier(.4,0,.2,1), padding .42s cubic-bezier(.4,0,.2,1),
+      margin-bottom .42s cubic-bezier(.4,0,.2,1), opacity .28s ease,
+      transform .42s cubic-bezier(.4,0,.2,1), visibility 0s linear .42s;
+  }
+  .navigation a {
+    padding: .8rem .5rem; opacity: 0; transform: translateY(-6px);
+    transition: opacity .18s ease, transform .22s cubic-bezier(.4,0,.2,1), color .2s ease;
+  }
+  .menuOpen .navigation a { opacity: 1; transform: translateY(0); transition-delay: .1s; }
+  .menuOpen .navigation a:nth-child(2) { transition-delay: .15s; }
+  .menuOpen .navigation a:nth-child(3) { transition-delay: .2s; }
+  .navigation a[aria-current="page"] { box-shadow: none; }
+  .menuOpen .navigation {
+    max-height: 180px; padding: .5rem .75rem; margin-bottom: .75rem;
+    opacity: 1; visibility: visible; transform: translateY(0);
+    transition-delay: 0s;
+  }
 }
 
 .hero {

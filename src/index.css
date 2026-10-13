@@ -21,7 +21,7 @@ body {
   min-height: 100vh;
   margin: 0;
   color: var(--branco);
-  background: #000;
+  background: #000 url('./Images/assets/fundo2.png') center / cover fixed;
 }
 body, button, a { font-family: var(--fonte-footer); }
 button, a { color: inherit; }
@@ -42,6 +42,7 @@ p { line-height: 1.7; }
 .sectionHeading { margin: 0 0 .75rem; font-size: clamp(2rem, 4vw, 3rem); }
 .sectionIntro { max-width: 680px; margin: 0 auto; color: var(--texto-suave); }
 @media (max-width: 640px) {
+  body { background-attachment: scroll; }
   .pageContainer { width: min(100% - 1.5rem, 1120px); }
 }
 @media (prefers-reduced-motion: reduce) {
