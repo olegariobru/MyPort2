@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import circuloColorido from '../../Images/assets/anel.png';
-import minhaFoto from '../../Images/assets/eu2.png';
+import minhaFoto from '../../Images/assets/perfil-bruno.webp';
 
 const introduction = 'Olá, eu sou o Bruno Olegário.';
 const nameStart = 'Olá, eu sou o '.length;
