@@ -25,7 +25,7 @@
   padding: clamp(1.5rem, 4vw, 3rem);
   border: 1px solid var(--glass-border);
   border-radius: 2.25rem;
-  background: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.035)), var(--glass-surface);
+  background: var(--glass-surface);
   box-shadow: inset 0 1px 0 var(--glass-highlight), var(--glass-shadow);
   -webkit-backdrop-filter: var(--glass-blur);
   backdrop-filter: var(--glass-blur);
@@ -34,13 +34,13 @@
 .skillGroup {
   border-color: var(--glass-border);
   border-radius: 1.4rem;
-  background: linear-gradient(145deg, rgba(255,255,255,.12), rgba(255,255,255,.035)), var(--glass-surface);
+  background: var(--glass-surface);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.24), 0 18px 40px rgba(0,0,0,.24);
   -webkit-backdrop-filter: blur(18px) saturate(140%);
   backdrop-filter: blur(18px) saturate(140%);
   transition: transform .25s ease, border-color .25s ease;
 }
-.skillGroup:hover { transform: translateY(-4px); border-color: rgba(174,119,206,.55); }
+.skillGroup:hover { transform: translateY(-4px); border-color: rgba(229,72,77,.58); }
 .skillGroup li {
   border-color: rgba(255,255,255,.18);
   background: rgba(255,255,255,.08);
@@ -49,7 +49,7 @@
 .aboutCta {
   border-color: var(--glass-border);
   border-radius: 1.5rem;
-  background: linear-gradient(135deg, rgba(127,69,160,.16), rgba(255,255,255,.06)), var(--glass-surface);
+  background: rgba(30, 17, 22, .58);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.22), 0 20px 48px rgba(0,0,0,.28);
   -webkit-backdrop-filter: var(--glass-blur);
   backdrop-filter: var(--glass-blur);

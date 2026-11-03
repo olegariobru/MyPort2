@@ -3,7 +3,7 @@
   color-scheme: dark;
   --azul-escuro: #000;
   --roxo: #19191b;
-  --rosa-texto: #7f45a0;
+  --rosa-texto: #e5484d;
   --branco: #fff;
   --texto-suave: #e3eaf4;
   --painel: rgba(15, 15, 16, 0.9);
@@ -69,10 +69,8 @@ body::before {
   inset: 0;
   z-index: -2;
   pointer-events: none;
-  background:
-    radial-gradient(circle at 16% 8%, rgba(127, 69, 160, .24), transparent 34%),
-    radial-gradient(circle at 84% 28%, rgba(80, 142, 174, .2), transparent 32%),
-    linear-gradient(180deg, rgba(3, 8, 14, .34), rgba(2, 5, 9, .82));
+  background: rgba(2, 5, 9, .58);
+  box-shadow: inset 0 0 220px rgba(145, 18, 31, .16);
 }
 body::after {
   content: "";
@@ -80,11 +78,7 @@ body::after {
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  opacity: .15;
-  background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
-  background-size: 72px 72px;
-  mask-image: linear-gradient(to bottom, #000, transparent 78%);
+  display: none;
 }
 .appShell { position: relative; z-index: 0; }
 .sectionHeading { letter-spacing: -.035em; text-wrap: balance; }
@@ -93,7 +87,4 @@ body::after {
     --glass-surface: rgba(10, 15, 23, .92);
     --glass-surface-strong: rgba(8, 12, 19, .96);
   }
-}
-@media (max-width: 640px) {
-  body::after { background-size: 48px 48px; }
 }
