@@ -48,3 +48,52 @@ p { line-height: 1.7; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* Liquid glass foundation */
+:root {
+  --glass-surface: rgba(14, 22, 32, .46);
+  --glass-surface-strong: rgba(12, 18, 27, .68);
+  --glass-border: rgba(255, 255, 255, .22);
+  --glass-highlight: rgba(255, 255, 255, .34);
+  --glass-shadow: 0 24px 70px rgba(0, 0, 0, .36);
+  --glass-blur: blur(24px) saturate(145%);
+}
+body {
+  position: relative;
+  isolation: isolate;
+  background-position: center;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 16% 8%, rgba(127, 69, 160, .24), transparent 34%),
+    radial-gradient(circle at 84% 28%, rgba(80, 142, 174, .2), transparent 32%),
+    linear-gradient(180deg, rgba(3, 8, 14, .34), rgba(2, 5, 9, .82));
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .15;
+  background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, #000, transparent 78%);
+}
+.appShell { position: relative; z-index: 0; }
+.sectionHeading { letter-spacing: -.035em; text-wrap: balance; }
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  :root {
+    --glass-surface: rgba(10, 15, 23, .92);
+    --glass-surface-strong: rgba(8, 12, 19, .96);
+  }
+}
+@media (max-width: 640px) {
+  body::after { background-size: 48px 48px; }
+}
