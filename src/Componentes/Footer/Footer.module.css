@@ -17,3 +17,47 @@
 @media (max-width: 440px) {
   .footerInner { flex-direction: column; justify-content: center; padding: 1rem 0; }
 }
+
+/* Liquid glass footer */
+.siteFooter {
+  padding: 0 0 1rem;
+  border-top: 0;
+  background: transparent;
+}
+.contactSection {
+  width: min(1120px, calc(100% - 2.5rem));
+  margin: 0 auto 1rem;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  border-radius: 1.75rem;
+  background: linear-gradient(135deg, rgba(127,69,160,.15), rgba(255,255,255,.045)), var(--glass-surface);
+  box-shadow: inset 0 1px 0 var(--glass-highlight), 0 22px 54px rgba(0,0,0,.3);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+}
+.contactInner { width: 100%; padding-inline: 1.5rem; }
+.footerInner {
+  min-height: 72px;
+  padding: 0 1.25rem;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 999px;
+  background: rgba(10,16,24,.46);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.13);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  backdrop-filter: blur(18px) saturate(140%);
+}
+.footerInner a {
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+.footerInner a:hover {
+  color: #fff;
+  border-color: rgba(255,255,255,.2);
+  background: rgba(255,255,255,.1);
+}
+@media (max-width: 700px) {
+  .contactSection { width: calc(100% - 1.5rem); }
+}
+@media (max-width: 440px) {
+  .footerInner { width: calc(100% - 1.5rem); border-radius: 1.4rem; }
+}
