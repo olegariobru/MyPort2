@@ -1,3 +1,4 @@
+import { useLanguage } from '../../language';
 import { useEffect, useRef } from 'react';
 import arkImage from '../../Images/projetos/arkitetura.png';
 import accessImage from '../../Images/projetos/AccessManeg.png';
@@ -7,6 +8,7 @@ import styles from './projectCard.module.css';
 const covers = { access: accessImage, architecture: arkImage };
 
 export default function ProjectCards({ featured = false }) {
+  const { t } = useLanguage();
   const timelineRef = useRef(null);
   const visibleProjects = featured ? projects.slice(0, 2) : projects;
 
@@ -56,12 +58,12 @@ export default function ProjectCards({ featured = false }) {
           : <span className={styles.projectMonogram} aria-hidden="true">{project.monogram}</span>}
       </div>
       <div className={styles.projectContent}>
-        <p className={styles.projectType}>{project.type}</p>
+        <p className={styles.projectType}>{t(project.type)}</p>
         <h2>{project.name}</h2>
-        <p className={styles.projectDescription}>{project.description}</p>
+        <p className={styles.projectDescription}>{t(project.description)}</p>
         <div className={styles.projectActions}>
-          <a className={styles.projectLink} href={project.showcaseUrl} target="_blank" rel="noreferrer">{project.showcaseLabel}</a>
-          <a className={styles.projectLink} href={project.repositoryUrl} target="_blank" rel="noreferrer">Ver GitHub</a>
+          <a className={styles.projectLink} href={project.showcaseUrl} target="_blank" rel="noreferrer">{t(project.showcaseLabel)}</a>
+          <a className={styles.projectLink} href={project.repositoryUrl} target="_blank" rel="noreferrer">{t("Ver GitHub")}</a>
         </div>
       </div>
     </article>)}
