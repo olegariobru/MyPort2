@@ -68,7 +68,7 @@ export default function App() {
         </nav>
       </div>
     </header>
-    <main id="main-content">
+    <main id="main-content" className="pageStage" key={pathname}>
       <Routes>
         <Route path="/" element={<Banner />} />
         <Route path="/projetos" element={<Projetos />} />

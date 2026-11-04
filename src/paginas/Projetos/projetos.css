@@ -1,2 +1,5 @@
-.projectsPage { min-height: 68vh; padding-top: 2rem; padding-bottom: 3rem; }
-.projectsPage .projectGrid { margin-top: 1.5rem; }
+.projectsPage { min-height: 70vh; padding-top: clamp(5rem,11vw,9rem); padding-bottom: clamp(6rem,12vw,10rem); }
+.projectsIntro { max-width: 980px; }
+.projectsIndex { margin: 0 0 1.5rem; color: var(--cor-acento-clara); font: 700 .9rem var(--fonte-secundaria); }
+.projectsIntro > p:last-child { max-width: 620px; margin: 1.5rem 0 0 auto; color: var(--texto-suave); font-size: clamp(1rem,2vw,1.2rem); }
+@media (max-width:760px) { .projectsIntro > p:last-child { margin-left: 0; } }
