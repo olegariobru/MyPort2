@@ -20,3 +20,6 @@
   .skillGroup { grid-template-columns: 1fr; gap: .75rem; }
   .aboutCta { align-items: flex-start; flex-direction: column; }
 }
+
+.skillsGrid { background: #40101c; padding-inline: 24px; border-top: 0; }
+.skillGroup { padding-block: 24px; }

@@ -30,3 +30,6 @@
   .projectContent { max-width: none; }
 }
 @media (prefers-reduced-motion:reduce) { .timelineItem { opacity: 1; transform: none; } .timelineRail span { transform: scaleY(1); } }
+
+.projectMonogram { background: #571522; }
+.timelineMarker { background: var(--cor-acento); border-color: #b94455; }

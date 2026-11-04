@@ -25,3 +25,7 @@ O gesto principal é uma progressão vertical. Na entrada, as linhas do título 
 - Contato aparece somente em Sobre mim.
 - Nenhum degradê, glassmorphism, cursor de digitação, título bicolor ou conjunto genérico de cartões.
 - Contraste legível, foco visível e ausência de overflow horizontal em 390 px.
+
+## Revisão de contato
+
+Contato como encerramento editorial: título “O próximo começo.” em grande escala e endereço real como ação principal, sem pergunta genérica ou botão de CTA repetido. Bordô agora ocupa o cabeçalho, a assinatura profissional, os marcos da timeline e a área de competências. Fundo original e ausência de degradês preservados.

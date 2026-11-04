@@ -12,10 +12,10 @@ export default function Footer({ showContact = false }) {
     {showContact && <section className={styles.contactSection} aria-labelledby="footer-contact-title">
       <div className={`${styles.contactInner} pageContainer`}>
         <div className={styles.contactCopy}>
-          <p className="eyebrow">Vamos conversar?</p>
-          <h2 id="footer-contact-title">Tem um desafio em mente?</h2>
+          <p className={styles.contactNote}>Ideia aberta. Próximo capítulo.</p>
+          <h2 id="footer-contact-title">O próximo<br />começo.</h2>
         </div>
-        <a className="button buttonPrimary" href="mailto:b_olgr@icloud.com">Entre em contato</a>
+        <a className={styles.contactAddress} href="mailto:b_olgr@icloud.com"><span>Escreva para Bruno</span><strong>b_olgr@icloud.com <span aria-hidden="true">↗</span></strong></a>
       </div>
     </section>}
     <div className={`${styles.footerInner} pageContainer`}>

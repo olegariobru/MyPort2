@@ -49,3 +49,7 @@
 }
 @media (max-width:420px) { .heroPortrait { min-height: 360px; } }
 @media (prefers-reduced-motion:reduce) { .pageStage,.heroLine { animation: none; } }
+
+.siteHeader { background: #40101c; }
+.heroRole { background: var(--cor-acento); padding: 20px 24px; color: #fff; max-width: 480px; }
+.heroRole::before { display: none; }

@@ -12,3 +12,14 @@
 .footerInner a:hover { color: #fff; background: var(--cor-acento); }
 @media (max-width:700px) { .contactInner { align-items:flex-start; flex-direction:column; justify-content:center; padding-top:3rem; padding-bottom:3rem; } }
 @media (max-width:440px) { .footerInner { flex-direction:column; justify-content:center; padding:1rem 0; } }
+
+.contactSection { position: relative; overflow: hidden; }
+.contactInner { min-height: 440px; align-items: end; padding-block: 64px; }
+.contactNote { margin: 0 0 32px; color: #fff; font-size: 1rem; }
+.contactCopy h2 { font-size: clamp(4rem,9vw,8rem); line-height: .92; letter-spacing: -.07em; }
+.contactAddress { display: block; padding: 24px 0; border-top: 1px solid rgba(255,255,255,.6); min-width: 280px; }
+.contactAddress > span { display: block; margin-bottom: 16px; font-size: .9rem; }
+.contactAddress strong { font-size: clamp(1.1rem,2vw,1.6rem); font-weight: 500; }
+.contactAddress strong span { display: inline-block; margin-left: 16px; transition: transform .3s ease; }
+.contactAddress:hover strong span { transform: translate(4px,-4px); }
+@media (max-width:700px) { .contactInner { align-items: stretch; gap: 48px; } .contactAddress { min-width: 0; } }

@@ -23,7 +23,7 @@ export default function SobreMim() {
       </article>)}</div>
     </section>
     <section className="aboutCta">
-      <p>Quer conhecer o que venho construindo?</p>
+      <p>Do código ao uso cotidiano.</p>
       <Link className="button buttonPrimary" to="/projetos">Explorar projetos</Link>
     </section>
   </div>;
