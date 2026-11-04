@@ -13,7 +13,6 @@ export default function Banner() {
     </div>
     <figure className="heroPortrait">
       <img className="portraitPhoto" src={minhaFoto} alt={t("Bruno Olegário diante da cidade ao entardecer")} loading="eager" />
-      <figcaption className="portraitIndex">{t("Santiago · Chile")}</figcaption>
     </figure>
   </section>;
 }
