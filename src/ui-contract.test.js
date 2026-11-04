@@ -7,7 +7,7 @@ test('pages expose keyboard navigation and a named main landmark', async () => {
   const css = await readFile(new URL('./index.css', import.meta.url), 'utf8');
   assert.match(app, /skipLink/);
   assert.match(app, /id="main-content"/);
-  assert.match(app, /aria-label="Navegação principal"/);
+  assert.match(app, /aria-label=\{t\("Navegação principal"\)\}/);
   assert.match(css, /:focus-visible/);
 });
 test('layout includes narrow-screen and reduced-motion rules', async () => {

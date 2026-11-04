@@ -20,10 +20,10 @@
 .timelineItem:nth-of-type(even) .projectVisual { grid-column: 2; }
 .timelineItem:nth-of-type(even) .projectContent { grid-column: 1; grid-row: 1; justify-self: end; }
 @media (max-width:760px) {
-  .timeline { gap: 5.5rem; margin-top: 3.5rem; padding-left: 2.25rem; }
-  .timelineRail { left: 0; }
+  .timeline { gap: 5.5rem; margin-top: 3.5rem; padding-left: 3.5rem; }
+  .timelineRail { left: 18px; }
   .timelineItem { grid-template-columns: 1fr; gap: 1.5rem; }
-  .timelineMarker { top: 0; left: -2.25rem; width: 36px; height: 36px; transform: translate(-50%,0); }
+  .timelineMarker { top: 0; left: calc(18px - 3.5rem); width: 36px; height: 36px; transform: translate(-50%,0); }
   .projectVisual { min-height: 220px; }
   .projectVisual img,.projectMonogram { min-height: 220px; }
   .timelineItem:nth-of-type(even) .projectVisual,.timelineItem:nth-of-type(even) .projectContent { grid-column: 1; grid-row: auto; justify-self: stretch; }

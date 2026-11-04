@@ -17,7 +17,7 @@ export default function Footer({ showContact = false }) {
           <p className={styles.contactNote}>{t("Ideia aberta. Próximo capítulo.")}</p>
           <h2 id="footer-contact-title">{t("O próximo")}<br />{t("começo.")}</h2>
         </div>
-        <a className={styles.contactAddress} href="mailto:b_olgr@icloud.com"><span>{t("Escreva para Bruno")}</span><strong>b_olgr@icloud.com <span aria-hidden="true">↗</span></strong></a>
+        <a className={styles.contactAddress} href="mailto:b_olgr@icloud.com"><span>{t("Escreva para Bruno")}</span><strong>b_olgr@icloud.com</strong></a>
       </div>
     </section>}
     <div className={`${styles.footerInner} pageContainer`}>
