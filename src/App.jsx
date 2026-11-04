@@ -1,3 +1,4 @@
+import { LanguagePicker, useLanguage } from './language';
 import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink, Route, Routes, useLocation } from 'react-router-dom';
 import Banner from './Componentes/Banner';
@@ -19,13 +20,15 @@ function PageTitle() {
   return null;
 }
 function NotFound() {
+  const { t } = useLanguage();
   return <section className="notFound pageContainer">
-    <p className="eyebrow">404 · página não encontrada</p>
-    <h1>Este caminho não existe.</h1>
-    <Link className="button buttonPrimary" to="/">Voltar ao início</Link>
+    <p className="eyebrow">{t("404 · página não encontrada")}</p>
+    <h1>{t("Este caminho não existe.")}</h1>
+    <Link className="button buttonPrimary" to="/">{t("Voltar ao início")}</Link>
   </section>;
 }
 export default function App() {
+  const { t } = useLanguage();
   const { pathname } = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuButton = useRef(null);
@@ -44,7 +47,7 @@ export default function App() {
   }
   return <div className="appShell">
     <PageTitle />
-    <a className="skipLink" href="#main-content">Pular para o conteúdo</a>
+    <a className="skipLink" href="#main-content">{t("Pular para o conteúdo")}</a>
     <header className={`siteHeader${menuOpen ? ' menuOpen' : ''}`} onKeyDown={handleHeaderKeyDown}
       onBlur={(event) => {
         if (!event.currentTarget.contains(event.relatedTarget)) setMenuOpen(false);
@@ -55,16 +58,16 @@ export default function App() {
           <span className="brandMobile">#BO.DEV</span>
         </Link>
         <button className="menuToggle" type="button" ref={menuButton}
-          aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
+          aria-label={menuOpen ? t('Fechar menu') : t('Abrir menu')}
           aria-expanded={menuOpen} aria-controls="primary-navigation"
           onClick={() => setMenuOpen((open) => !open)}>
           <span aria-hidden="true" /><span aria-hidden="true" /><span aria-hidden="true" />
         </button>
-        <nav id="primary-navigation" className="navigation" aria-label="Navegação principal"
+        <nav id="primary-navigation" className="navigation" aria-label={t("Navegação principal")}
           onClick={() => setMenuOpen(false)}>
-          <NavLink to="/" end>Início</NavLink>
-          <NavLink to="/projetos">Projetos</NavLink>
-          <NavLink to="/sobre-mim">Sobre mim</NavLink>
+          <NavLink to="/" end>{t("Início")}</NavLink>
+          <NavLink to="/projetos">{t("Projetos")}</NavLink>
+          <NavLink to="/sobre-mim">{t("Sobre mim")}</NavLink>
         </nav>
       </div>
     </header>
@@ -78,6 +81,7 @@ export default function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
     </main>
+    <LanguagePicker />
     <Footer showContact={['/sobre-mim', '/SobreMim'].includes(pathname)} />
   </div>;
 }

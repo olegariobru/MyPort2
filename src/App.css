@@ -20,7 +20,7 @@
 .heroCopy { max-width: 760px; }
 .heroTitle { margin: 0; }
 .heroLineClip { display: block; overflow: hidden; padding-bottom: .08em; }
-.heroLine { display: block; font-family: var(--fonte-titulos); font-size: clamp(3.35rem,8vw,7.4rem); font-weight: 650; line-height: .88; letter-spacing: -.075em; animation: lineRise .78s var(--ease-out) both; }
+.heroLine { display: block; font-family: var(--fonte-titulos); font-size: clamp(3.35rem,8vw,7.4rem); font-weight: 650; line-height: 1.12; letter-spacing: -.075em; animation: lineRise .78s var(--ease-out) both; }
 .heroLineClip:nth-child(2) .heroLine { animation-delay: .09s; }
 @keyframes lineRise { from { opacity: 0; transform: translateY(105%); } to { opacity: 1; transform: translateY(0); } }
 .heroRole { margin: 1.5rem 0 0; padding-left: 3rem; position: relative; color: var(--texto-suave); font-family: var(--fonte-secundaria); font-size: clamp(.95rem,1.5vw,1.15rem); }
@@ -50,6 +50,12 @@
 @media (max-width:420px) { .heroPortrait { min-height: 360px; } }
 @media (prefers-reduced-motion:reduce) { .pageStage,.heroLine { animation: none; } }
 
-.siteHeader { background: #40101c; }
-.heroRole { background: var(--cor-acento); padding: 20px 24px; color: #fff; max-width: 480px; }
+.siteHeader { background: var(--cor-acento); }
+.heroRole { background: var(--cor-acento); display: inline-block; padding: 10px 20px; color: #fff; max-width: 100%; }
 .heroRole::before { display: none; }
+
+.heroRole { background: none; padding: 0; color: #b94455; font-family: var(--fonte-titulos); font-size: clamp(1.2rem,2.2vw,1.8rem); font-weight: 400; letter-spacing: .08em; }
+.languagePicker { display: flex; align-items: center; justify-content: center; padding: 32px 12px; color: var(--texto-suave); font-weight: 300; }
+.languagePicker button { min-width: 48px; min-height: 44px; padding: 8px; border: 0; background: none; font-size: .8rem; font-weight: 300; letter-spacing: .1em; cursor: pointer; }
+.languagePicker button[aria-pressed="true"] { color: #fff; text-decoration: underline; text-decoration-color: var(--cor-acento-clara); text-underline-offset: 6px; }
+.languagePicker button:hover { color: #fff; }
