@@ -33,3 +33,6 @@
 
 .projectMonogram { background: #571522; }
 .timelineMarker { background: var(--cor-acento); border-color: #b94455; }
+
+.projectVisual:has(img) { min-height: 0; }
+.projectVisual img { height: auto; min-height: 0; object-fit: contain; filter: none; }

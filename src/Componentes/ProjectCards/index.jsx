@@ -1,11 +1,10 @@
 import { useLanguage } from '../../language';
 import { useEffect, useRef } from 'react';
 import arkImage from '../../Images/projetos/arkitetura.png';
-import accessImage from '../../Images/projetos/AccessManeg.png';
 import { projects } from '../../data/projects';
 import styles from './projectCard.module.css';
 
-const covers = { access: accessImage, architecture: arkImage };
+const covers = { architecture: arkImage };
 
 export default function ProjectCards({ featured = false }) {
   const { t } = useLanguage();
@@ -53,8 +52,8 @@ export default function ProjectCards({ featured = false }) {
     {visibleProjects.map((project, index) => <article className={styles.timelineItem} data-timeline-item key={project.slug}>
       <div className={styles.timelineMarker} aria-hidden="true">{String(index + 1).padStart(2, '0')}</div>
       <div className={styles.projectVisual}>
-        {covers[project.cover]
-          ? <img src={covers[project.cover]} alt={`Tela do projeto ${project.name}`} loading={index > 1 ? 'lazy' : 'eager'} />
+        {(project.image || covers[project.cover])
+          ? <img src={(project.image || covers[project.cover])} alt={`Tela do projeto ${project.name}`} loading={index > 1 ? 'lazy' : 'eager'} />
           : <span className={styles.projectMonogram} aria-hidden="true">{project.monogram}</span>}
       </div>
       <div className={styles.projectContent}>
@@ -63,7 +62,7 @@ export default function ProjectCards({ featured = false }) {
         <p className={styles.projectDescription}>{t(project.description)}</p>
         <div className={styles.projectActions}>
           <a className={styles.projectLink} href={project.showcaseUrl} target="_blank" rel="noreferrer">{t(project.showcaseLabel)}</a>
-          <a className={styles.projectLink} href={project.repositoryUrl} target="_blank" rel="noreferrer">{t("Ver GitHub")}</a>
+          {project.repositoryUrl && <a className={styles.projectLink} href={project.repositoryUrl} target="_blank" rel="noreferrer">{t("Ver GitHub")}</a>}
         </div>
       </div>
     </article>)}

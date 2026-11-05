@@ -2,15 +2,15 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { projects } from './projects.js';
 
-test('prioriza os quatro projetos escolhidos na ordem aprovada', () => {
+test('mantém AccessManager primeiro e inclui os novos projetos', () => {
   assert.deepEqual(projects.map(({ name }) => name), [
-    'AccessManager', 'ARKtetura', 'RenameOS Desktop', 'pyCacador',
+    'AccessManager', 'SERVNET — Carteirinha', 'Carolina Alcântara', 'mycash', 'Quem não me segue?', 'ARKtetura', 'RenameOS Desktop', 'pyCacador',
   ]);
 });
 test('cada card tem links de demonstração ou documentação e repositório', () => {
   for (const project of projects) {
-    assert.match(project.showcaseUrl, /^https:\/\//, `${project.name} precisa de um link de apresentação`);
-    assert.match(project.repositoryUrl, /^https:\/\/github\.com\/olegariobru\//, `${project.name} precisa do GitHub`);
+    assert.match(project.showcaseUrl, /^(https:\/\/|\/projects\/)/, `${project.name} precisa de um link de apresentação`);
+    if (project.repositoryUrl) assert.match(project.repositoryUrl, /^https:\/\/github\.com\/olegariobru\//, `${project.name} precisa do GitHub`);
     assert.ok(project.showcaseLabel && project.description);
   }
 });
