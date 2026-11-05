@@ -6,6 +6,42 @@ import './sobremim.css';
 
 const groups = [
   {
+    "title": "Desenvolvimento web",
+    "note": "Tecnologias com que tenho contato",
+    "items": [
+      "HTML",
+      "CSS3",
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "WordPress",
+      "APIs REST"
+    ]
+  },
+  {
+    "title": "Programação e ferramentas",
+    "note": "Tecnologias com que tenho contato",
+    "items": [
+      "Python",
+      "GitHub",
+      "Vercel",
+      "Ferramentas de IA",
+      "Vite com apoio de IA"
+    ]
+  },
+  {
+    "title": "Dados e análise",
+    "note": "Ferramentas e atividades",
+    "items": [
+      "SQL",
+      "PostgreSQL",
+      "MySQL",
+      "Microsoft Access",
+      "Excel",
+      "Análise de dados em BI"
+    ]
+  },
+  {
     "title": "Suporte e infraestrutura",
     "note": "Experiência prática",
     "items": [
@@ -24,42 +60,6 @@ const groups = [
       "Políticas de grupo (GPO)",
       "Administração de antivírus Kaspersky",
       "KeePass"
-    ]
-  },
-  {
-    "title": "Desenvolvimento web",
-    "note": "Tecnologias com que tenho contato",
-    "items": [
-      "HTML",
-      "CSS3",
-      "JavaScript",
-      "Node.js",
-      "Express",
-      "WordPress",
-      "APIs REST"
-    ]
-  },
-  {
-    "title": "Dados e análise",
-    "note": "Ferramentas e atividades",
-    "items": [
-      "SQL",
-      "PostgreSQL",
-      "MySQL",
-      "Microsoft Access",
-      "Excel",
-      "Análise de dados em BI"
-    ]
-  },
-  {
-    "title": "Programação e ferramentas",
-    "note": "Tecnologias com que tenho contato",
-    "items": [
-      "Python",
-      "GitHub",
-      "Vercel",
-      "Ferramentas de IA",
-      "Vite com apoio de IA"
     ]
   },
   {
