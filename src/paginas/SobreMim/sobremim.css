@@ -23,3 +23,9 @@
 
 .skillsGrid { background: #40101c; padding-inline: 24px; border-top: 0; }
 .skillGroup { padding-block: 24px; }
+
+.skillsSummary { max-width: 680px; margin: 24px 0 0; color: var(--texto-suave); font-size: 1.05rem; }
+.skillHeading p { margin: 12px 0 0; color: var(--texto-suave); font-size: .82rem; line-height: 1.5; }
+.skillGroup ul { align-content: start; gap: 12px 24px; }
+.skillGroup li { line-height: 1.6; }
+.skillGroup { padding-block: 32px; }
