@@ -1,29 +1,48 @@
 # Portfólio — Bruno Olegário
 
-Portfólio pessoal em português para apresentar experiência em Tecnologia da Informação e projetos de desenvolvimento.
+Portfólio pessoal para apresentar minha experiência em Tecnologia da Informação e meus projetos de desenvolvimento. Construído com React e Vite, com publicação na Vercel.
+
+## Experiência atual
+
+- Visual em bordô e branco, com o background original preservado e sem degradês ou glassmorphism.
+- Inglês como idioma inicial, com seletor **EN | PT | ES** centralizado acima do rodapé. A preferência é salva no navegador e o idioma do documento acompanha a seleção.
+- Apresentação com entrada animada do título, assinatura profissional em texto bordô e retrato sem legenda.
+- Projetos em linha do tempo vertical, com progresso ligado ao scroll e revelação dos itens. No desktop, imagem e descrição alternam de lado; no mobile, seguem uma coluna com marcadores dentro da tela.
+- Menu hambúrguer no mobile, com transformação dos três traços em X e fechamento pela tecla Escape.
+- Contato exclusivo da página Sobre mim, com composição tipográfica e link direto para e-mail.
+- Interface sem emojis; os links de redes sociais usam ícones SVG.
+
+## Projetos apresentados
+
+| Projeto | Finalidade |
+| --- | --- |
+| AccessManager | Organização de acessos e informações de RH |
+| ARKtetura | Site para um escritório de arquitetura e urbanismo |
+| RenameOS Desktop | Padronização e renomeação de arquivos em lote |
+| pyCacador | Localização de arquivos duplicados |
+
+Cada projeto inclui links para seu repositório e para demonstração, capturas ou documentação, conforme disponível.
 
 ## Stack
 
 - React 18 e React Router
 - Vite 8
-- Componentes React com JSX em arquivos `.jsx`
-- CSS responsivo e CSS Modules compatíveis
-- Testes de dados com o runner nativo do Node.js
+- CSS responsivo e CSS Modules
+- React Icons
+- Testes com o runner nativo do Node.js
 
-## Requisitos
+## Executar localmente
 
-Node.js 22.12 ou superior e npm.
-
-## Desenvolvimento
+Requer Node.js 22.12 ou superior e npm.
 
 ```bash
 npm ci
 npm run dev
 ```
 
-Abra o endereço local exibido pelo Vite (normalmente `http://localhost:5173`).
+Abra o endereço exibido pelo Vite, normalmente `http://localhost:5173`.
 
-## Build e testes
+## Testes e build
 
 ```bash
 npm test
@@ -31,20 +50,32 @@ npm run build
 npm run preview
 ```
 
-O build de produção é criado em `dist/`. O workflow do GitHub instala as dependências do lockfile, executa os testes e valida o build em cada push e pull request.
+O build é gerado em `dist/`. `npm run preview` permite conferir esse build localmente antes da publicação.
+
+Os testes verificam os dados dos projetos e contratos básicos de navegação, foco, breakpoints e movimento reduzido. A revisão no navegador complementa esses testes para conferir animações, idiomas, contraste e cortes de conteúdo.
 
 ## Estrutura
 
-- `src/paginas/`: início, projetos e sobre mim.
-- `src/Componentes/`: navegação, apresentação, cards e rodapé.
-- `src/data/projects.js`: dados e links dos projetos priorizados.
-- `public/`: manifesto, favicon e sitemap.
+- `src/App.jsx`: rotas, cabeçalho e navegação responsiva.
+- `src/Componentes/Banner/`: apresentação da página inicial.
+- `src/Componentes/ProjectCards/`: linha do tempo dos projetos e animação de scroll.
+- `src/Componentes/Footer/`: contato e redes sociais.
+- `src/paginas/`: páginas Projetos e Sobre mim.
+- `src/data/projects.js`: conteúdo e links dos projetos.
+- `src/language.jsx`: traduções, contexto de idioma e seletor EN / PT / ES.
+- `src/index.css` e `src/App.css`: tokens visuais e estilos compartilhados.
+- `public/`: favicon, manifesto e sitemap.
+- `DESIGN.md`: decisões de direção visual.
 
-Os links de apresentação indicam claramente quando levam a uma demonstração ao vivo, capturas de tela ou instruções no README.
+Ao alterar textos, mantenha as versões em inglês, português e espanhol sincronizadas em `src/language.jsx`.
 
-## Acessibilidade e telas menores
+## Acessibilidade
 
-O site inclui link para pular ao conteúdo, navegação identificada, foco visível, nomes acessíveis em ícones, imagens decorativas ocultas para leitores de tela e suporte a preferência por movimento reduzido. A grade se adapta a telas estreitas. Os testes também verificam esses contratos de navegação, foco, preferência de movimento e breakpoints; a inspeção visual manual no navegador continua recomendada.
+Link para pular ao conteúdo, foco visível, navegação identificada, controles de idioma com estado acessível e textos alternativos nas imagens. As animações respeitam `prefers-reduced-motion`. A linha do tempo e o menu se adaptam a telas menores.
+
+## Publicação
+
+A branch `main` está conectada à produção na Vercel. Alterações enviadas para ela iniciam um deploy automático; confirme o status da Vercel no GitHub antes de considerar a publicação concluída.
 
 ## Autor
 
