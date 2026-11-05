@@ -1,6 +1,6 @@
 .siteHeader { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid var(--linha); background: rgba(8,8,10,.94); }
 .headerInner { width: min(1180px,calc(100% - 3rem)); min-height: 76px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
-.brand { font: 650 1rem var(--fonte-titulos); letter-spacing: -.03em; white-space: nowrap; }
+.brand { font: 400 1rem var(--fonte-titulos); letter-spacing: -.03em; white-space: nowrap; }
 .brandMobile { display: none; }
 .navigation { display: flex; align-items: center; gap: clamp(1.5rem,4vw,3.5rem); font-family: var(--fonte-secundaria); }
 .navigation a { position: relative; padding: 1.7rem 0; color: var(--texto-suave); font-size: .9rem; font-weight: 650; }

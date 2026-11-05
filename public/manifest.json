@@ -2,11 +2,25 @@
   "short_name": "Bruno Olegário",
   "name": "Portfólio de Bruno Olegário",
   "icons": [
-    { "src": "favicon.ico", "sizes": "64x64 32x32 24x24 16x16", "type": "image/x-icon" }
+    {
+      "src": "favicon.ico",
+      "sizes": "16x16 24x24 32x32 48x48 64x64",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "logo512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
   ],
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#041833",
-  "background_color": "#041833",
+  "theme_color": "#7f1d2d",
+  "background_color": "#08080a",
   "lang": "pt-BR"
 }
