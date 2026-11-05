@@ -49,7 +49,8 @@ const groups = [
       "Instalação e manutenção de redes",
       "Servidores",
       "Instalação de câmeras CFTV",
-      "Manutenção de sistemas de ponto"
+      "Manutenção de sistemas de ponto",
+      "Automação residencial com Alexa e Google Home"
     ]
   },
   {
